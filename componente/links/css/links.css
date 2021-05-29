@@ -1,0 +1,244 @@
+/* == ================================================= 
+|        (0) PSEUDO-CLASA ":ROOT"
+|          (DEF. VAR. 'GLOBALE' pPERSONALIZATE)
+   =================================================== */
+:root {
+  --culoare-principala: #2584ff;
+  --culoare-secundara: #00d9ff;
+  --culoare-accent: #ff3400;
+  --culoare-titluri: #1b0760;
+  --culoare-corp: #918ca4;
+}
+
+/*  
+////////////////////////////////////////////////////////
+
+           (I) TIPOGRAFIE  [MOBILE]
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+*/ /* == ============================================== 
+|        (1.1) ELEM. "HTML"
+|     (DEF. DIMENSIUNII DE BAZA AL FONTULUI)
+   =================================================== */
+html {
+  /* FONT INITIAL: '10PX' , ADICA ('16PX * 62.5%)  ' */
+  font-size: 62.5%;
+}
+
+/*  
+  
+  
+  
+  
+  */ /* == ============================================== 
+  |        (1.2) ELEM. "BODY"
+  |          (DEF. FONTURI TEXT CORP)
+     =================================================== */
+body {
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-size: 2.4rem;
+
+  /* INALTIME LINIE - 1.5 DIN DIMENSIUNEA FONTULUI CURENT*/
+  line-height: 1.5;
+  color: var(--culoare-corp);
+}
+
+/*  
+  
+  
+  
+  
+  */ /* == ============================================== 
+  |        (1.3) ELEM. "H1, H2, H3"
+  |          (DEF. FONTURI TEXT TITLURI)
+     =================================================== */
+h1,
+h2,
+h3 {
+  color: var(--culoare-titluri);
+  margin-bottom: 1rem;
+}
+
+/*  
+  
+  
+  
+  
+  */ /* == ============================================== 
+  |        (1.3.1) ELEM. "H1"
+  |          (DEF. DIM. FONTURI TEXT TITLURI)
+     =================================================== */
+h1 {
+  font-size: 7rem;
+}
+
+/*  
+  
+  
+  
+  
+  */ /* == ============================================== 
+  |        (1.3.2) ELEM. "H2"
+  |          (DEF. DIM. FONTURI TEXT TITLURI)
+     =================================================== */
+h2 {
+  font-size: 4rem;
+}
+
+/*  
+  
+  
+  
+  
+  */ /* == ============================================== 
+  |        (1.3.3) ELEM. "H3"
+  |          (DEF. DIM. FONTURI TEXT TITLURI)
+     =================================================== */
+h3 {
+  font-size: 3rem;
+}
+
+/*  
+  
+  
+  
+  
+  */ /* == ============================================== 
+  |        (1.4) ELEM. "P"
+  |          (DEF. MARGINI TOP)
+     =================================================== */
+p {
+  margin-top: 0;
+}
+
+/*  
+  
+  
+  
+  
+  */ /* 
+     ////////////////////////////////////////////////////
+  |                (I) TIPOGRAFIE  [DESKTOP]   
+  |         ( @MEDIA  QUERY (LATIME  MINIMA: 1024PX) )
+     \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+@media screen and (min-width: 1024px) {
+  /* == ============================================== 
+    |        (0.1) ELEM. "BODY"
+     =================================================== */
+  body {
+    font-size: 1.8rem;
+  }
+
+  /* == ============================================== 
+    |        (0.2.1) ELEM. "H1"
+     =================================================== */
+  h1 {
+    font-size: 8rem;
+  }
+
+  /* == ============================================== 
+    |        (0.2.2) ELEM. "H2"
+     =================================================== */
+  h2 {
+    font-size: 4rem;
+  }
+
+  /* == ============================================== 
+    |        (0.2.3) ELEM. "H3"
+     =================================================== */
+  h3 {
+    font-size: 2.4rem;
+  }
+}
+
+/*
+
+
+
+
+*/ /*  
+  ////////////////////////////////////////////////////////
+  
+             (II) LINK-URI  [MOBILE]
+  
+  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+  */ /* == ============================================== 
+  |        (2.1) ELEM. "A"
+  |     
+     =================================================== */
+a {
+  /* DEZACTIVAM  SUBLINIEREA LINK-URILOR*/
+  text-decoration: none;
+}
+
+/*  
+  
+  
+  
+  
+  */ /* == ============================================== 
+  |         (2.2) CLS. "LINK-SAGEATA"
+  |          
+     =================================================== */
+.link-sageata {
+  /* CULOARE LINK */
+  color: var(--culoare-accent);
+
+  /* TRANSFORMAM CARACTERELE = IN "LITERE MARI" */
+  text-transform: uppercase;
+
+  /* DIM. FONT LINK */
+  font-size: 2rem;
+
+  /* INGROSAM  CARACTERELE */
+  font-weight: bold;
+}
+
+/*  
+  
+  
+  
+  
+  */ /* == ============================================== 
+  |         (2.2.1) PSEUDO-CLS. "::AFTER"
+  |    (PT. ADAUGAREA "SAGETII" DUPA CUVANTUL "LINK")   
+     =================================================== */
+.link-sageata::after {
+  /* ADAUGARE "CONTINUT" = "ICON"  */
+  content: "-->";
+  margin-left: 5px;
+
+  /* ANIMAREA "TRANZITIEI" = "MARGIN"   */
+  transform: margin 0.15s;
+}
+
+/*  
+  
+  
+  
+  
+  */ /* == ============================================== 
+  |         (2.2.2) PSEUDO-CLS. ":HOVER::AFTER"
+  |    (PT. EFECT ASUPRA "SAGETII" DUPA CUVANTUL "LINK")   
+     =================================================== */
+.link-sageata:hover:after {
+  /* MARIM "MARGINEA LA STANGA"   */
+  margin-left: 10px;
+}
+
+/*  
+  
+  
+  
+  
+  */ /* 
+     ////////////////////////////////////////////////////
+  |                (II) LINK-URI  [DESKTOP]   
+  |         ( @MEDIA  QUERY (LATIME  MINIMA: 1024PX) )
+     \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+@media screen and (min-width: 1024px) {
+  .link-sageata {
+    /* DIM. FONT LINK - PE [DESKTOP] */
+    font-size: 1.5rem;
+  }
+}
