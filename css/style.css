@@ -674,11 +674,11 @@ a {
 |          (6.4.H) CLS. "BTN-OUTLINE" (CONTUT)
 |     ("HOVER - BUTOANE" CU "LINIE DE  CONTUR" (FARA CULOARE) )
    =================================================== */
-   .btn-outline:hover {
+  .btn-outline:hover {
 
-    background: var(--culoare-titluri);
-    color: #fff;
-  }
+  background: var(--culoare-titluri);
+  color: #fff;
+}
 
   
 /*  
@@ -696,3 +696,62 @@ a {
     font-size: 1.5rem;
   }
 }
+
+
+/*
+
+
+
+
+*/ /*  
+////////////////////////////////////////////////////////
+
+           (VII) INPUTS (INTRARI)  [MOBILE]
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+*/ /* == ============================================== 
+|          (7.1) CLS. "INPUT"
+|     
+   =================================================== */
+.input {
+  border-radius: 30px;
+  border: 1px solid #ccc;
+  color: var(--culoare-titluri);
+  font-size: 2rem;
+
+  /* DEZACTIVAM "CONTURUL"-UL ADAUGAT DE BROUSER PT. INPUT */
+  outline: 0;
+  padding: 1.5rem 3.5rem;
+}
+
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|          (7.2) OSEUDO-SELECTORUL. "::PLACEHOLDER"
+|    (PT. SETAREA CULORI TEXTULUI DIN "PLACEHOLDER") 
+   =================================================== */
+::placeholder {
+color: #cdcbd7;
+}
+
+ 
+/*  
+
+
+
+
+*/ /* 
+   ////////////////////////////////////////////////////
+|                (VII) INPUT  [DESKTOP]   
+|         ( @MEDIA  QUERY (LATIME  MINIMA: 1024PX) )
+   \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+@media screen and (min-width: 1024px) {
+  .input{
+    font-size: 1.5rem;
+  }
+}
+  
