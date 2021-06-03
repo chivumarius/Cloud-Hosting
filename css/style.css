@@ -8,6 +8,7 @@
   --culoare-accent: #ff3400;
   --culoare-titluri: #1b0760;
   --culoare-corp: #918ca4;
+  --culoare-corp-intunecata: #5c5577;
   --culoare-border: #ccc;
   --border-radius: 30px;
 }
@@ -1103,3 +1104,129 @@ a {
 .media__image {
   margin-top: 1rem;
 } 
+
+
+/*
+
+
+
+
+*/ /*  
+////////////////////////////////////////////////////////
+
+           (XI) CITATE (QUOTES)   [MOBILE]
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+*/ /* == ============================================== 
+|          (11.1) CLS. "CITAT"
+|     
+   =================================================== */
+   .citat {
+    font-size: 3rem;
+    font-style: italic;
+    columns: var(--culoare-corp-intunecata);
+    line-height: 1.3;
+  }
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|        (11.2.1) PSEUDO-CLS. "CITAT__TEXT::BEFORE"
+|           (PT. ADG. GHILIMELE DE DESCHIDERE)
+   =================================================== */
+.citat__text::before {
+    
+  /* "DESCHIDERE"  CITAT */
+  /* PROP. 'CONTINUT' = "OPEN-QUOPE"   */
+  content: open-quote;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|        (11.2.2) PSEUDO-CLS. "CITAT__TEXT::AFTER"
+|           (PT. ADG. GHILIMELE DE INCHIDERE)
+   =================================================== */
+.citat__text::after {
+
+  /* "INCHIDERE"  CITAT */
+  /* PROP. 'CONTINUT' = "OPEN-QUOPE"   */
+  content: close-quote;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|        (11.3) CLS. "AUTOR__CITAT"
+|           
+   =================================================== */
+.autor__citat {
+  font-size: 3rem; 
+  font-weight: 500; 
+  font-style: normal;
+  margin-bottom: 0;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|        (11.4) CLS. "CITAT__COMPANIE"
+|          
+   =================================================== */
+.citat__companie {
+ color: var(--culoare-titluri);
+ opacity: .4;
+ font-size: 2rem;
+ font-style: normal;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|        (11.5) CLS. "LINIE__CITAT"
+|          
+   =================================================== */
+.linie__citat {
+ position: relative;
+ bottom: 10px;
+}
+
+
+/*
+
+
+
+
+*/ /* 
+   ////////////////////////////////////////////////////
+|                (XI) CITAT - QUOTE  [DESKTOP]   
+|         ( @MEDIA  QUERY (LATIME  MINIMA: 1024PX) )
+   \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+   @media screen and (min-width: 1024px) {
+    .citat {
+      font-size: 2rem;
+    }
+    
+    .autor__citat {
+      font-size: 2.4rem;
+    }
+
+    .citat__companie {
+      font-size: 1.6rem;
+    }
+  }
