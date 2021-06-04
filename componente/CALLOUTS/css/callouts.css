@@ -1,0 +1,647 @@
+/* == ================================================= 
+|        (0.1) PSEUDO-CLASA ":ROOT"
+|          (DEF. VAR. 'GLOBALE' pPERSONALIZATE)
+   =================================================== */
+:root {
+  --culoare-principala: #2584ff;
+  --culoare-secundara: #00d9ff;
+  --culoare-accent: #ff3400;
+  --culoare-titluri: #1b0760;
+  --culoare-corp: #918ca4;
+  --culoare-corp-intunecata: #5c5577;
+  --culoare-border: #ccc;
+  --border-radius: 30px;
+}
+
+
+/*
+
+
+
+
+*//* == ================================================= 
+|    (0.2) SELECTORUL UNIVERSAL  &  PSEUDO-SELECTORUL
+|             "*",  "*::AFTER",  "*::BEFORE"
+|        (PT. DEF. "TUTUROR" ELEMENTELOR "HTML")
+   =================================================== */
+*, *::after, *::before {
+ 
+  /* PROP. "BOX-SIZING" (DIM. CUTIEI) */
+  /* CU VAL. "BORDER-BOX" (CUTIE DE DIM. BORDER-ULUI) */
+ box-sizing: border-box;
+}
+
+/*
+
+
+
+
+*/
+
+/*  
+////////////////////////////////////////////////////////
+
+           (I) TIPOGRAFIE  [MOBILE]
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+*/ /* == ============================================== 
+|        (1.1) ELEM. "HTML"
+|     (DEF. DIMENSIUNII DE BAZA AL FONTULUI)
+   =================================================== */
+html {
+  /* FONT INITIAL: '10PX' , ADICA ('16PX * 62.5%)  ' */
+  font-size: 62.5%;
+}
+
+/*  
+
+
+
+
+*/ /* == ============================================== 
+|        (1.2) ELEM. "BODY"
+|          (DEF. FONTURI TEXT CORP)
+   =================================================== */
+body {
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-size: 2.4rem;
+
+  /* INALTIME LINIE - 1.5 DIN DIMENSIUNEA FONTULUI CURENT*/
+  line-height: 1.5;
+  color: var(--culoare-corp);
+}
+
+/*  
+
+
+
+
+*/ /* == ============================================== 
+|        (1.3) ELEM. "H1, H2, H3"
+|          (DEF. FONTURI TEXT TITLURI)
+   =================================================== */
+h1,
+h2,
+h3 {
+  color: var(--culoare-titluri);
+  margin-bottom: 1rem;
+}
+
+/*  
+
+
+
+
+*/ /* == ============================================== 
+|        (1.3.1) ELEM. "H1"
+|          (DEF. DIM. FONTURI TEXT TITLURI)
+   =================================================== */
+h1 {
+  font-size: 7rem;
+}
+
+/*  
+
+
+
+
+*/ /* == ============================================== 
+|        (1.3.2) ELEM. "H2"
+|          (DEF. DIM. FONTURI TEXT TITLURI)
+   =================================================== */
+h2 {
+  font-size: 4rem;
+}
+
+/*  
+
+
+
+
+*/ /* == ============================================== 
+|        (1.3.3) ELEM. "H3"
+|          (DEF. DIM. FONTURI TEXT TITLURI)
+   =================================================== */
+h3 {
+  font-size: 3rem;
+}
+
+/*  
+
+
+
+
+*/ /* == ============================================== 
+|        (1.4) ELEM. "P"
+|          (DEF. MARGINI TOP)
+   =================================================== */
+p {
+  margin-top: 0;
+}
+
+/*  
+
+
+
+
+*/ /* 
+   ////////////////////////////////////////////////////
+|                (I) TIPOGRAFIE  [DESKTOP]   
+|         ( @MEDIA  QUERY (LATIME  MINIMA: 1024PX) )
+   \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+@media screen and (min-width: 1024px) {
+  /* == ============================================== 
+  |        (0.1) ELEM. "BODY"
+   =================================================== */
+  body {
+    font-size: 1.8rem;
+  }
+
+  /* == ============================================== 
+  |        (0.2.1) ELEM. "H1"
+   =================================================== */
+  h1 {
+    font-size: 8rem;
+  }
+
+  /* == ============================================== 
+  |        (0.2.2) ELEM. "H2"
+   =================================================== */
+  h2 {
+    font-size: 4rem;
+  }
+
+  /* == ============================================== 
+  |        (0.2.3) ELEM. "H3"
+   =================================================== */
+  h3 {
+    font-size: 2.4rem;
+  }
+}
+
+/* 
+
+
+
+
+*/ /*  
+////////////////////////////////////////////////////////
+
+           (II) LINK-URI  [MOBILE]
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+*/ /* == ============================================== 
+|        (2.1) ELEM. "A"
+|     
+   =================================================== */
+a {
+  /* DEZACTIVAM  SUBLINIEREA LINK-URILOR*/
+  text-decoration: none;
+}
+
+/*  
+
+
+
+
+*/ /* == ============================================== 
+|         (2.2) CLS. "LINK-SAGEATA"
+|          
+   =================================================== */
+.link-sageata {
+  /* CULOARE LINK */
+  color: var(--culoare-accent);
+
+  /* TRANSFORMAM CARACTERELE = IN "LITERE MARI" */
+  text-transform: uppercase;
+
+  /* DIM. FONT LINK */
+  font-size: 2rem;
+
+  /* INGROSAM  CARACTERELE */
+  font-weight: bold;
+}
+
+/*  
+
+
+
+
+*/ /* == ============================================== 
+|         (2.2.1) PSEUDO-CLS. "::AFTER"
+|    (PT. ADAUGAREA "SAGETII" DUPA CUVANTUL "LINK")   
+   =================================================== */
+.link-sageata::after {
+  /* ADAUGARE "CONTINUT" = "ICON"  */
+  content: "-->";
+  margin-left: 5px;
+
+  /* ANIMAREA "TRANZITIEI" = "MARGIN"   */
+  transform: margin 0.15s;
+}
+
+/*  
+
+
+
+
+*/ /* == ============================================== 
+|         (2.2.2) PSEUDO-CLS. ":HOVER::AFTER"
+|    (PT. EFECT ASUPRA "SAGETII" DUPA CUVANTUL "LINK")   
+   =================================================== */
+.link-sageata:hover:after {
+  /* MARIM "MARGINEA LA STANGA"   */
+  margin-left: 10px;
+}
+
+/*  
+
+
+
+
+*/ /* 
+   ////////////////////////////////////////////////////
+|                (II) LINK-URI  [DESKTOP]   
+|         ( @MEDIA  QUERY (LATIME  MINIMA: 1024PX) )
+   \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+@media screen and (min-width: 1024px) {
+  .link-sageata {
+    /* DIM. FONT LINK - PE [DESKTOP] */
+    font-size: 1.5rem;
+  }
+}
+
+/*
+
+
+
+
+*/ /*  
+////////////////////////////////////////////////////////
+
+           (VI) BUTOANE   [MOBILE]
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+*/ /* == ============================================== 
+|          (6.1) CLS. "BTN"
+|     (PT. FONT, DISTANTARE SI BORDER)
+   =================================================== */
+.btn {
+  /* DEZACTIVARE BORDER (LINIE DE CONTUR)) */
+  border 0;
+  
+  /* ROTUNJIRE COLTURI BORDER */
+  border-radius: 40px;
+  
+  /* SETARE  CURSOR (LA HOVER PESTE BUTON) = 'POINTER' (MANA) */
+  cursor: pointer;
+  font-size: 1.8rem;
+  font-weight: 600;
+
+  /* MARGINI = PE "VERTICAL (SUS.- JOS)",  "ORIZONTAL (ST.- DR)" */
+  margin: 1rem 0;
+
+  /* DISTANTARE (PADDING) = PE "VERTICAL (SUS.- JOS)",  "ORIZONTAL (ST.- DR)" */
+  padding: 2rem 3rem;
+
+  text-align: center;
+
+  /* TRANSFORMAREA "CARACTERELOR" -- IN "LITERE MARI" */
+  text-transform: uppercase;
+
+  /* SPATIEREA AUTOMATA = 'NOWRAP' (FARA IMPACHETARE) */
+  white-space: nowrap;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|          (6.2.1) CLS. "BTN--PRINCIPAL"
+|     (PT. CULOARE - BUTON & TEXT)
+   =================================================== */
+.btn--principal {
+  background-color: var(--culoare-principala);
+  color: #fff;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|          (6.2.1.H) CLS. "BTN--PRINCIPAL:HOVER"
+|     (ADAUGAREA  EFECTULUI HOVER PE BUTON)
+   =================================================== */
+.btn--principal:hover {
+  /* FUNC. SASS 'LIGHTEN()' */
+  /* background-color: lighten(principal, 10%); */
+
+  background: #3a8ffd;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|          (6.2.2) CLS. "BTN--SECUNDAR"
+|     (PT. CULOARE - BUTON & TEXT)
+   =================================================== */
+.btn--secundar {
+  background-color: var(--culoare-secundara);
+  color: #fff;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|          (6.2.2.H) CLS. "BTN--SECUNDAR:HOVER"
+|     (ADAUGAREA  EFECTULUI HOVER PE BUTON)
+   =================================================== */
+.btn--secundar:hover {
+  background-color: #00c8eb;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|          (6.2.3) CLS. "BTN--ACCENT"
+|     (PT. CULOARE - BUTON & TEXT)
+   =================================================== */
+.btn--accent {
+  background-color: var(--culoare-accent);
+  color: #fff;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|          (6.2.3.H) CLS. "BTN--ACCENT:HOVER"
+|     (ADAUGAREA  EFECTULUI HOVER PE BUTON)
+   =================================================== */
+.btn--accent:hover {
+  background-color: #ec3000;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|          (6.3) CLS. "BTN--INTINS" (STRETCHED)
+|     (PT. BTN LUNGI (PE MOBIL))
+   =================================================== */
+.btn--intins {
+  padding-left: 6rem;
+  padding-right: 6rem;
+}
+
+/*
+
+
+
+
+*//* == ============================================== 
+|          (6.4) CLS. "BTN-BLOCK"
+|     ("BUTOANE" PE "INTREAGA LATIME" A "COLOANEI")
+   =================================================== */
+   .btn-block {
+
+    /* LATIME PE TOT RANDUL */
+    width: 100%;
+    
+    /* AFISARE - "BLOC IN LINIE" */
+    display: inline-block;
+  }
+
+  
+
+/*
+
+
+
+
+*//* == ============================================== 
+|          (6.5) CLS. "BTN-OUTLINE" (CONTUT)
+|     ("BUTOANE" CU "LINIE DE  CONTUR" (FARA CULOARE) )
+   =================================================== */
+   .btn-outline {
+
+    background: #fff;
+    color: var(--culoare-titluri);
+    border: 2px solid var(--culoare-titluri);
+  }
+
+/*
+
+
+
+
+*//* == ============================================== 
+|          (6.5.H) CLS. "BTN-OUTLINE" (CONTUT)
+|     ("HOVER - BUTOANE" CU "LINIE DE  CONTUR" (FARA CULOARE) )
+   =================================================== */
+  .btn-outline:hover {
+
+  background: var(--culoare-titluri);
+  color: #fff;
+}
+
+  
+/*  
+
+
+
+
+*/ /* 
+   ////////////////////////////////////////////////////
+|                (VI) BUTOANE  [DESKTOP]   
+|         ( @MEDIA  QUERY (LATIME  MINIMA: 1024PX) )
+   \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+@media screen and (min-width: 1024px) {
+  .btn{
+    font-size: 1.5rem;
+  }
+}
+
+
+  
+/*
+
+
+
+
+*/ /*  
+////////////////////////////////////////////////////////
+
+           (XII) GRIDS   [MOBILE]
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+*/ /* == ============================================== 
+|          (12.1) CLS. "GRID"
+|     
+   =================================================== */
+.grid{
+  display: grid;
+}
+
+
+/*
+
+
+
+
+*/ /* 
+   ////////////////////////////////////////////////////
+|                (XII) GRIDS [TABLET]   
+|         ( @MEDIA  QUERY (LATIME  MINIMA: 1024PX) )
+   \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+@media screen and (min-width: 768px) {
+  .grid--2-cols {
+    /* grid-template-columns: 1fr 1fr; */
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/*
+
+
+
+
+*/ /* 
+   ////////////////////////////////////////////////////
+|                (XII) GRIDS [DESKTOP]   
+|         ( @MEDIA  QUERY (LATIME  MINIMA: 1024PX) )
+   \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+@media screen and (min-width: 1024px) {
+  .grid--3-cols {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+/*
+
+
+
+
+*/ /*  
+////////////////////////////////////////////////////////
+
+    (XIV) CALLOUTS (MES INSTINTARE)    [MOBILE]
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+*/ /* == ============================================== 
+|          (14.1) CLS. "CALLOUT"
+|     
+   =================================================== */
+   .callout {
+    padding: 4rem;
+    border-radius: 4px;
+  }
+  
+/*
+
+
+
+
+*/ /* == ============================================== 
+|          (14.2) CLS. "CALLOUT--PRINCIPAL"
+|     
+   =================================================== */
+   .callout--principal {
+    background-color: var(--culoare-principala);
+    color: #fff;  
+  }
+  
+/*
+
+
+
+
+*/ /* == ============================================== 
+|          (14.3) CLS. "CALLOUT__TITLU"
+|     
+   =================================================== */
+   .callout__titlu {
+    color: #fff;  
+    margin-top: 0;
+    font-size: 3rem;
+  }
+  
+/*
+
+
+
+
+*/ /* == ============================================== 
+|          (14.4) CLS. "BTN" DIN CLS. "CALLOUT"
+|     
+   =================================================== */
+   .callout .btn {
+     /* ALINIERE "ORIZONTALA" */
+    justify-self: center;
+
+    /* ALINIERE "VERTICALA" */
+    align-self: center;
+  } 
+ 
+  
+/*
+
+
+
+
+*/ /* == ============================================== 
+|          (14.5) CLS. "CALLOUT__CONTINUT"
+|     
+   =================================================== */
+   .callout__continut {
+    text-align: center;
+  } 
+ 
+  
+/*
+
+
+
+
+*/ /* 
+   ////////////////////////////////////////////////////
+|                (XIV) CALLOUT (MES. INSTINTARE) [TABLETA]   
+|         ( @MEDIA  QUERY (LATIME  MINIMA: 1024PX) )
+   \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+@media screen and (min-width: 768px) {
+ .callout .grid--2-cols {
+   /* SPATUL LIBER DIN COL 2  ESTE ALOCAT COL. 1 */
+   grid-template-columns: 1fr auto;
+ }
+
+ .callout__continut {
+   text-align: left;
+ }
+ 
+ .callout .btn {
+   justify-self: start;
+   
+   /* MARGINI "VERTICAL", "ORIZONTAL" */
+   margin: 0 2rem;
+ }
+}
+
