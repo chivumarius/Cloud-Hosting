@@ -1,0 +1,622 @@
+/* == ================================================= 
+|        (0.1) PSEUDO-CLASA ":ROOT"
+|          (DEF. VAR. 'GLOBALE' pPERSONALIZATE)
+   =================================================== */
+:root {
+  --culoare-principala: #2584ff;
+  --culoare-secundara: #00d9ff;
+  --culoare-accent: #ff3400;
+  --culoare-titluri: #1b0760;
+  --culoare-corp: #918ca4;
+  --culoare-corp-intunecata: #5c5577;
+  --culoare-border: #ccc;
+  --border-radius: 30px;
+}
+
+/*
+
+
+
+
+*/ /* == ================================================= 
+|    (0.2) SELECTORUL UNIVERSAL  &  PSEUDO-SELECTORUL
+|             "*",  "*::AFTER",  "*::BEFORE"
+|        (PT. DEF. "TUTUROR" ELEMENTELOR "HTML")
+   =================================================== */
+*,
+*::after,
+*::before {
+  /* PROP. "BOX-SIZING" (DIM. CUTIEI) */
+  /* CU VAL. "BORDER-BOX" (CUTIE DE DIM. BORDER-ULUI) */
+  box-sizing: border-box;
+}
+
+/*
+
+
+
+
+*/
+
+/*  
+////////////////////////////////////////////////////////
+
+           (I) TIPOGRAFIE  [MOBILE]
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+*/ /* == ============================================== 
+|        (1.1) ELEM. "HTML"
+|     (DEF. DIMENSIUNII DE BAZA AL FONTULUI)
+   =================================================== */
+html {
+  /* FONT INITIAL: '10PX' , ADICA ('16PX * 62.5%)  ' */
+  font-size: 62.5%;
+}
+
+/*  
+
+
+
+
+*/ /* == ============================================== 
+|        (1.2) ELEM. "BODY"
+|          (DEF. FONTURI TEXT CORP)
+   =================================================== */
+body {
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-size: 2.4rem;
+
+  /* INALTIME LINIE - 1.5 DIN DIMENSIUNEA FONTULUI CURENT*/
+  line-height: 1.5;
+  color: var(--culoare-corp);
+}
+
+/*  
+
+
+
+
+*/ /* == ============================================== 
+|        (1.3) ELEM. "H1, H2, H3"
+|          (DEF. FONTURI TEXT TITLURI)
+   =================================================== */
+h1,
+h2,
+h3 {
+  color: var(--culoare-titluri);
+  margin-bottom: 1rem;
+}
+
+/*  
+
+
+
+
+*/ /* == ============================================== 
+|        (1.3.1) ELEM. "H1"
+|          (DEF. DIM. FONTURI TEXT TITLURI)
+   =================================================== */
+h1 {
+  font-size: 7rem;
+}
+
+/*  
+
+
+
+
+*/ /* == ============================================== 
+|        (1.3.2) ELEM. "H2"
+|          (DEF. DIM. FONTURI TEXT TITLURI)
+   =================================================== */
+h2 {
+  font-size: 4rem;
+}
+
+/*  
+
+
+
+
+*/ /* == ============================================== 
+|        (1.3.3) ELEM. "H3"
+|          (DEF. DIM. FONTURI TEXT TITLURI)
+   =================================================== */
+h3 {
+  font-size: 3rem;
+}
+
+/*  
+
+
+
+
+*/ /* == ============================================== 
+|        (1.4) ELEM. "P"
+|          (DEF. MARGINI TOP)
+   =================================================== */
+p {
+  margin-top: 0;
+}
+
+/*  
+
+
+
+
+*/ /* 
+   ////////////////////////////////////////////////////
+|                (I) TIPOGRAFIE  [DESKTOP]   
+|         ( @MEDIA  QUERY (LATIME  MINIMA: 1024PX) )
+   \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+@media screen and (min-width: 1024px) {
+  /* == ============================================== 
+  |        (0.1) ELEM. "BODY"
+   =================================================== */
+  body {
+    font-size: 1.8rem;
+  }
+
+  /* == ============================================== 
+  |        (0.2.1) ELEM. "H1"
+   =================================================== */
+  h1 {
+    font-size: 8rem;
+  }
+
+  /* == ============================================== 
+  |        (0.2.2) ELEM. "H2"
+   =================================================== */
+  h2 {
+    font-size: 4rem;
+  }
+
+  /* == ============================================== 
+  |        (0.2.3) ELEM. "H3"
+   =================================================== */
+  h3 {
+    font-size: 2.4rem;
+  }
+}
+
+/*
+
+
+
+
+*/ /*  
+////////////////////////////////////////////////////////
+
+           (V) ICONS (PICTOGRAME)  [MOBILE]
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+*/ /* == ============================================== 
+|          (5.1) CLS. "ICON"
+|     (PT. DIMENSIONAREA ICON-URILOR)
+   =================================================== */
+.icon {
+  width: 40px;
+  height: 40px;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|          (5.2) CLS. "ICON--MIC"
+|     (PT. MICSORAREA DIMENSIUNII ICON-URILOR)
+   =================================================== */
+.icon--mic {
+  width: 30px;
+  height: 30px;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|          (5.3) CLS. "ICON"
+|     (PT. CULOAREA FRONT A ICON-URILOR)
+   =================================================== */
+.icon--principal {
+  /* PROP. SVG "FILL" (IN LOC DE "COLOR")   */
+  fill: var(--culoare-principala);
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|          (5.4) CLS. "ICON--ALB"
+|     (PT. CULOAREA FRONT a ICON-URILOR)
+   =================================================== */
+.icon--alb {
+  /* PROP. SVG "FILL" (IN LOC DE "COLOR")   */
+  fill: #fff;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|          (5.5) CLS. "ICON-CONTAINER"
+|         (PT. CREARE CERC IN JURUL ICON-ULUI)
+   =================================================== */
+.icon-container {
+  /* background-color: gold; */
+  background-color: #f3f9fa;
+
+  width: 64px;
+  height: 64px;
+
+  /* IL ROTUNJIM */
+  border-radius: 100%;
+
+  /* AFISAREA CENTRATA = "FLEX IN LINIE" */
+  display: inline-flex;
+
+  /* ALINIEREA FATA DE "AXA ORIZONTALA" */
+  justify-content: center;
+
+  /* ALINIEREA FATA DE "AXA VERTICALA" */
+  align-items: center;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|       (5.6) CLS. "ICON-CONTAINER--ACCENT"
+|       (PT. BACKGROUND ICON - TESTIMONIAL)
+   =================================================== */
+.icon-container--accent {
+  background-color: var(--culoare-accent);
+}
+
+/*
+
+
+
+
+*/ /*  
+////////////////////////////////////////////////////////
+
+           (VIII) CARDURI   [MOBILE]
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+*/ /* == ============================================== 
+|          (8.1) CLS. "CARD"
+|     
+   =================================================== */
+.card {
+  border-radius: 7px;
+
+  /* SHADOW = "OFFSET: X, Y", "BLUR", 
+  box-shadow: 0 0 20px 10px #f3f3f3;  
+
+  /* ASCUNDEM  'SUPRAPUNEREA' 
+     (PT. ROTUNJIREA COLTURILOR HEADER__CARD) */
+  overflow: hidden;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|      (8.2) CLS. "CARD__HEADER" & "CARD__BODY"
+|             (DEF. PADDING-UL)
+   =================================================== */
+.card__header,
+.card__body {
+  padding: 2rem 3rem;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|  (8.3.1) CLS. "CARD__PRINCIPAL" CU SETARE "CARD__HEADER"
+|       (PT. DEF. CULORII PRINCIPALEL)
+   =================================================== */
+.card--principal .card__header {
+  background-color: var(--culoare-principala);
+  color: #fff;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|  (8.3.2.1) CLS. "CARD__SECUNDAR" CU SETARE "CARD__HEADER"
+|       (PT. DEF. CULORII SECUNDARE)
+   =================================================== */
+.card--secundar .card__header {
+  background-color: var(--culoare-secundara);
+  color: #fff;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|  (8.3.2.2) CLS. "CARD__SECUNDAR" 
+|            CU SETARE "BADGE---SECUNDAR"
+|  (PT. DEF. "CULORII BACKGROUND" PT "BADGE SECUNDAR")
+   =================================================== */
+.card--secundar .badge--secundar {
+  background-color: #02cdf1;
+}
+
+/*
+
+
+
+
+*/ /*  
+////////////////////////////////////////////////////////
+
+           (XI) CITATE (QUOTES)   [MOBILE]
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+*/ /* == ============================================== 
+|          (11.1) CLS. "CITAT"
+|     
+   =================================================== */
+.citat {
+  font-size: 3rem;
+  font-style: italic;
+  columns: var(--culoare-corp-intunecata);
+  line-height: 1.3;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|        (11.2.1) PSEUDO-CLS. "CITAT__TEXT::BEFORE"
+|           (PT. ADG. GHILIMELE DE DESCHIDERE)
+   =================================================== */
+.citat__text::before {
+  /* "DESCHIDERE"  CITAT */
+  /* PROP. 'CONTINUT' = "OPEN-QUOPE"   */
+  content: open-quote;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|        (11.2.2) PSEUDO-CLS. "CITAT__TEXT::AFTER"
+|           (PT. ADG. GHILIMELE DE INCHIDERE)
+   =================================================== */
+.citat__text::after {
+  /* "INCHIDERE"  CITAT */
+  /* PROP. 'CONTINUT' = "OPEN-QUOPE"   */
+  content: close-quote;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|        (11.3) CLS. "AUTOR__CITAT"
+|           
+   =================================================== */
+.autor__citat {
+  font-size: 3rem;
+  font-weight: 500;
+  font-style: normal;
+  margin-bottom: 0;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|        (11.4) CLS. "CITAT__COMPANIE"
+|          
+   =================================================== */
+.citat__companie {
+  color: var(--culoare-titluri);
+  opacity: 0.4;
+  font-size: 2rem;
+  font-style: normal;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|        (11.5) CLS. "LINIE__CITAT"
+|          
+   =================================================== */
+.linie__citat {
+  position: relative;
+  bottom: 10px;
+}
+
+/*
+
+
+
+
+*/ /* 
+   ////////////////////////////////////////////////////
+|                (XI) CITAT - QUOTE  [DESKTOP]   
+|         ( @MEDIA  QUERY (LATIME  MINIMA: 1024PX) )
+   \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+@media screen and (min-width: 1024px) {
+  .citat {
+    font-size: 2rem;
+  }
+
+  .autor__citat {
+    font-size: 2.4rem;
+  }
+
+  .citat__companie {
+    font-size: 1.6rem;
+  }
+}
+
+/*
+
+
+
+
+*/ /*  
+////////////////////////////////////////////////////////
+
+           (XII) GRIDS   [MOBILE]
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+*/ /* == ============================================== 
+|          (12.1) CLS. "GRID"
+|     
+   =================================================== */
+.grid {
+  display: grid;
+}
+
+/*
+
+
+
+
+*/ /* 
+   ////////////////////////////////////////////////////
+|                (XII) GRIDS [TABLET]   
+|         ( @MEDIA  QUERY (LATIME  MINIMA: 1024PX) )
+   \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+@media screen and (min-width: 768px) {
+  .grid--2-cols {
+    /* grid-template-columns: 1fr 1fr; */
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/*
+
+
+
+
+*/ /* 
+   ////////////////////////////////////////////////////
+|                (XII) GRIDS [DESKTOP]   
+|         ( @MEDIA  QUERY (LATIME  MINIMA: 1024PX) )
+   \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+@media screen and (min-width: 1024px) {
+  .grid--3-cols {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/*
+
+
+
+
+*/ /*  
+////////////////////////////////////////////////////////
+
+           (XIII) TESTIMONIALS    [MOBILE]
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+*/ /* == ============================================== 
+|          (13.1) CLS. "TESTIMONIAL"
+|     
+   =================================================== */
+.testimonial {
+  padding: 3rem;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|          (13.2) CLS. "TESTIMONIAL__IMAGE"
+|     
+   =================================================== */
+.testimonial__image {
+  position: relative;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|          (13.3) TRANS-SELECTORUL " > IMG" DIN CLS. "TESTIMONIAL__IMAGE"
+|                  (PT. SELECTAREA IMAGINI)
+   =================================================== */
+.testimonial__image > img {
+  width: 100%;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|          (13.4) TRANS-SELECTORUL CLS. " > .ICON-CONTAINER" 
+|                      DIN CLS. "TESTIMONIAL__IMAGE"     
+|             ( PT. POZITIONAREA ABSOLUTA A ICON-ULUI)          
+   =================================================== */
+.testimonial__image > .icon-container {
+  position: absolute;
+  top: 3rem;
+  right: -32px;
+}
+
+/*
+
+
+
+
+*/ /* 
+   ////////////////////////////////////////////////////
+|                (XIII) GRIDS [TABLET]   
+|         ( @MEDIA  QUERY (LATIME  MINIMA: 1024PX) )
+   \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+@media screen and (min-width: 768px) {
+  .testimonial .quote,
+  .testimonial .autor__citat {
+    font-size: 2.4rem;
+  }
+
+  .testimonial .quote {
+    margin-left: 6rem;
+  }
+}

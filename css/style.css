@@ -470,8 +470,22 @@ a {
 
 
 */ /* == ============================================== 
-|          (5.2) CLS. "ICON"
-|     (PT. CULOAREAS ICON-URILOR)
+|          (5.2) CLS. "ICON--MIC"
+|     (PT. MICSORAREA DIMENSIUNII ICON-URILOR)
+   =================================================== */
+.icon--mic {
+  width: 30px;
+  height: 30px;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|          (5.3) CLS. "ICON"
+|     (PT. CULOAREA FRONT A ICON-URILOR)
    =================================================== */
 .icon--principal {
   /* PROP. SVG "FILL" (IN LOC DE "COLOR")   */
@@ -484,7 +498,21 @@ a {
 
 
 */ /* == ============================================== 
-|          (5.3) CLS. "ICON-CONTAINER"
+|          (5.4) CLS. "ICON--ALB"
+|     (PT. CULOAREA FRONT a ICON-URILOR)
+   =================================================== */
+.icon--alb {
+  /* PROP. SVG "FILL" (IN LOC DE "COLOR")   */
+  fill: #fff;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|          (5.5) CLS. "ICON-CONTAINER"
 |         (PT. CREARE CERC IN JURUL ICON-ULUI)
    =================================================== */
 .icon-container {
@@ -505,6 +533,19 @@ a {
 
   /* ALINIEREA FATA DE "AXA VERTICALA" */
   align-items: center;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|       (5.6) CLS. "ICON-CONTAINER--ACCENT"
+|       (PT. BACKGROUND ICON - TESTIMONIAL)
+   =================================================== */
+.icon-container--accent {
+  background-color: var(--culoare-accent)
 }
 
 /*
@@ -1286,3 +1327,90 @@ a {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+
+
+/*
+
+
+
+
+*/ /*  
+////////////////////////////////////////////////////////
+
+           (XIII) TESTIMONIALS    [MOBILE]
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+*/ /* == ============================================== 
+|          (13.1) CLS. "TESTIMONIAL"
+|     
+   =================================================== */
+.testimonial {
+  padding: 3rem;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|          (13.2) CLS. "TESTIMONIAL__IMAGE"
+|     
+   =================================================== */
+.testimonial__image {
+  position: relative ;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|          (13.3) TRANS-SELECTORUL " > IMG" DIN CLS. "TESTIMONIAL__IMAGE"
+|                  (PT. SELECTAREA IMAGINI)
+   =================================================== */
+.testimonial__image > img {
+  width: 100%; 
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|          (13.4) TRANS-SELECTORUL CLS. " > .ICON-CONTAINER" 
+|                      DIN CLS. "TESTIMONIAL__IMAGE"     
+|             ( PT. POZITIONAREA ABSOLUTA A ICON-ULUI)          
+   =================================================== */
+.testimonial__image > .icon-container {
+  position: absolute;
+  top: 3rem;
+  right: -32px;
+}
+
+
+/*
+
+
+
+
+*/ /* 
+   ////////////////////////////////////////////////////
+|                (XIII) GRIDS [TABLET]   
+|         ( @MEDIA  QUERY (LATIME  MINIMA: 1024PX) )
+   \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+@media screen and (min-width: 768px) {
+  .testimonial .quote, 
+  .testimonial .autor__citat {
+    font-size: 2.4rem;
+  }
+
+  .testimonial .quote {
+    margin-left: 6rem;
+  }
+}
+  
+  
