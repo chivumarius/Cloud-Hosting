@@ -1538,3 +1538,124 @@ a {
  }
 }
 
+
+
+/*
+
+
+
+
+*/ /*  
+////////////////////////////////////////////////////////
+
+    (XV) COLLAPSIBLES  (PLIABILE)    [MOBILE]
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+*/ /* == ============================================== 
+|          (15.1) CLS. "COLLAPSIBLE__HEADER"
+|     
+   =================================================== */
+   .collapsible__header {
+     display: flex;
+
+     /* ADG. SPATIU INTRE "ELEMENT" & "ICON" */
+     justify-content: space-between;
+   }
+
+/* 
+
+
+
+
+*/ /* == ============================================== 
+|          (15.2) CLS. "COLLAPSIBLE__TITLU"
+|     
+   =================================================== */
+   .collapsible__titlu {
+     margin-top: 0;
+     font-size: 3rem;
+   } 
+
+/* 
+
+
+
+
+*/ /* == ============================================== 
+|     (15.3) CLS. "COLLAPSIBLE__ICON-CHEVRON"
+|        (PT. ROTIREA ICONULUI)
+   =================================================== */
+   .collapsible__icon-chevron {
+
+    /* ROTIM ICONUL */
+    transform: rotate(-90deg);
+
+    /* ANIMARE ICON */
+   transition:  transform 0.3s;
+   } 
+
+/* 
+
+
+
+
+*/ /* == ============================================== 
+|      (15.4) CLS. "COLLAPSIBLE__ICON-CHEVRON"
+|          (PT. ASCUNDEREA  CONTINUTULUI)
+   =================================================== */
+   .collapsible__continut {
+
+    /* ASCUNDERE CONTINUT */
+    /* display: none; */
+
+    /* INALTIMEA MAXIMA = ZERO  */
+    max-height: 0;
+
+    /* ASCUNDERE CONTINUT */
+    overflow: hidden;
+
+    opacity: 0;
+
+    /* ANIMARE "MAX-HEIGHT" LA 3 SEC */
+    /* transition: max-height 0.3s; */
+
+    /* ANIMARE PROP. MULTIPLE */
+    transition: all 0.3s;
+   } 
+
+/* 
+
+
+
+
+*/ /* == ============================================== 
+|     (15.5) CLS "COLLAPSIBLE__ICON-CHEVRON"  DIN 
+|            CLS. "COLLAPSIBLE--DESCHIS"
+|        (PT. ROTIREA ICONULUI LA POZITIA INITIALA)
+   =================================================== */
+   .collapsible--deschis .collapsible__icon-chevron {
+
+    /* ROTIM ICONUL */
+      transform: rotate(0);
+   } 
+
+/* 
+
+
+
+
+*/ /* == ============================================== 
+|     (15.6) CLS "COLLAPSIBLE__CONTINUT"  DIN 
+|            CLS. "COLLAPSIBLE--DESCHIS"
+|          (PT. AFISAREA CONTINUTULUI)
+   =================================================== */
+   .collapsible--deschis .collapsible__continut {
+
+    /* AFISARE BLOC TEXT */
+    /* display: block; */
+
+    /* INALTIMEA MAXIMA = 100VH  */
+    max-height: 100vh;
+    
+    opacity: 1;
+   } 
