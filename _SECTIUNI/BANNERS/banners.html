@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BANNER (HERO)</title>
+
+    <!-- GOOGLE  FONTS (INTER - REGULAR, BOLD) -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- NORMALIZE CSS -->
+    <!-- <link rel="stylesheet" href="css/normalize.css" /> -->
+
+    <!-- STYLE CSS -->
+    <link rel="stylesheet" href="css/banners.css" />
+  </head>
+
+  <body>
+    <!-- BANNER (HERO/EROU) -->
+    <section class="bloc bloc--negru bloc--inclinat-stanga hero">
+      <div class="container grid grid--2-cols">
+        <!-- COLOANA 1 - "CONTINUT HERO" -->
+        <header class="bloc__header hero__continut">
+          <h1 class="bloc__titlu">Gazduire Cloud pentru Profesioniști</h1>
+          <p class="hero__slogan">
+            Implementați website-ul în mai puțin de 1 minut.
+          </p>
+          <a href="" class="btn btn--accent btn--intins">Incepe</a>
+        </header>
+
+        <!-- COLOANA 2 - "IMAGINE" -->
+        <picture>
+          <!-- WEB P -->
+          <source
+            type="image/webp"
+            srcset="images/banner.webp 1x, images/banner@2x.webp 2x"
+          />
+
+          <!-- PNG -->
+          <source
+            type="image/png"
+            srcset="images/banner.png 1x, images/banner@2x.png 2x"
+          />
+
+          <img class="hero__image" src="images/banner.png" alt="" />
+        </picture>
+      </div>
+    </section>
+    <!-- ----------------------------------------------------------- -->
+
+    <!-- ----------------------------------------------------------- -->
+    <!-- JAVASCRIPT FILE (IMPORT) -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
