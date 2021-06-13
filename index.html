@@ -18,10 +18,494 @@
 
     <!-- STYLE CSS -->
     <link rel="stylesheet" href="css/style.css" />
+
+    <!-- AOS LIBRARY (ANIMATE ON SCROLL) -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
 
   <body>
+    <!-- (CP 1) SEC. 'NAVBAR' IN 'HEADER' -->
+    <header>
+      <!-- (CP 1) NAVIGATION - BG. "NEGRU" -->
+      <nav class="nav collapsible">
+        <!-- (1) LOGO -->
+        <a class="nav__brand" href="/"><img src="images/logo.svg" alt="" /></a>
+
+        <!-- (2) ICON "MOBILE MENU"   -->
+        <svg class="icon icon--alb nav__comutare">
+          <!-- INCARCAM DIN FISIERUL 'SPRITE.SVC'-- ID-UL '#MENU'  -->
+          <use xlink:href="images/sprite.svg#menu"></use>
+        </svg>
+
+        <!-- (3) LISTA 'MENIU' -->
+        <ul class="list nav__list collapsible__continut">
+          <li class="nav__item"><a href="#">Gazduire Web</a></li>
+          <li class="nav__item"><a href="#">VPS</a></li>
+          <li class="nav__item"><a href="#">Domeniu Web</a></li>
+          <li class="nav__item"><a href="#">Preturi</a></li>
+        </ul>
+      </nav>
+      <!-- ----------------------------------------------------------- -->
+    </header>
     <!-- ----------------------------------------------------------- -->
+
+    <!-- (CP 2) BANNER (HERO/EROU) -->
+    <section class="bloc bloc--negru bloc--inclinat-stanga hero">
+      <div class="container grid grid--2-cols">
+        <!-- COLOANA 1 - "CONTINUT HERO" -->
+        <header class="bloc__header hero__continut">
+          <h1 data-aos="fade-right" class="bloc__titlu">
+            Gazduire Cloud pentru Profesioniști
+          </h1>
+          <p class="hero__slogan">
+            Implementați website-ul în mai puțin de 1 minut.
+          </p>
+          <a href="" class="btn btn--accent btn--intins">Incepe</a>
+        </header>
+
+        <!-- COLOANA 2 - "IMAGINE" -->
+        <picture data-aos="zoom-in">
+          <!-- WEB P -->
+          <source
+            type="image/webp"
+            srcset="images/banner.webp 1x, images/banner@2x.webp 2x"
+          />
+
+          <!-- PNG -->
+          <source
+            type="image/png"
+            srcset="images/banner.png 1x, images/banner@2x.png 2x"
+          />
+
+          <img class="hero__image" src="images/banner.png" alt="" />
+        </picture>
+      </div>
+    </section>
+    <!-- ----------------------------------------------------------- -->
+
+    <!-- (CP 3) SEC. 'DOMENII'  -->
+    <section data-aos="fade-up" class="bloc container bloc-domenii">
+      <!-- HEADER SEC. -->
+      <header class="bloc__header">
+        <h2>Incepand de la 8 &euro;/luna</h2>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo, iste?
+        </p>
+      </header>
+
+      <!-- GRUPAREA CAMPURILOR INPUT   -->
+      <div class="input-group">
+        <!-- INPUTS (INTRATI) -->
+        <input
+          type="text"
+          class="input"
+          placeholder="Introduceti numele domeniului aici..."
+        />
+
+        <!-- BUTON -->
+        <button class="btn btn--accent">
+          <!-- ICON 'SVG' -->
+          <svg class="icon icon--alb">
+            <!-- INCARCAM DIN FISIERUL 'SPRITE.SVC'-- ID-UL '#SEARCH'  -->
+            <use xlink:href="images/sprite.svg#search"></use>
+          </svg>
+          Cauta
+        </button>
+      </div>
+
+      <!-- LISTA DE PRET -->
+      <ul class="list bloc-domenii__preturi">
+        <li><span class="badge badge--secundar">.com 9&euro;</span></li>
+        <li>.ro 12&euro;</li>
+        <li>.net 9&euro;</li>
+        <li>.eu 6&euro;</li>
+        <li>.info 13&euro;</li>
+        <li>.space 10&euro;</li>
+      </ul>
+    </section>
+    <!-- ----------------------------------------------------------- -->
+
+    <!-- (CP 4) SEC. 'PLANURI'  -->
+    <section data-aos="fade-up" class="bloc container bloc-planuri">
+      <div class="grid grid--3-cols">
+        <!--__________PLAN ABONARE 1____________________-->
+        <div class="plan">
+          <div class="card card--secundar">
+            <!-- HEADER CARD -->
+            <header class="card__header">
+              <h3 class="plan__nume">Intrare</h3>
+              <span class="plan__pret">12&#8364;</span>
+              <span class="plan__facturare-ciclu">/luna</span>
+              <span class="badge badge--secundar badge--mic">10% REDUS</span>
+              <span class="plan__descriere">Pornire ușoară pe cloud</span>
+            </header>
+
+            <!-- BODY CARD -->
+            <div class="card__body">
+              <!-- LISTA 'BIFATA' (TICK) -->
+              <ul class="list list--tick">
+                <li class="list__item">Website Final</li>
+                <li class="list__item">Lățime de Bandă Finală</li>
+                <li class="list__item">Depozitare SSD 100 GB</li>
+                <li class="list__item">RAM 3 GB</li>
+              </ul>
+
+              <!-- BUTON -->
+              <button class="btn ntn--outline btn-block">Cumpara Acum</button>
+            </div>
+          </div>
+        </div>
+        <!--____________________________________________-->
+
+        <!--__________PLAN ABONARE 2____________________-->
+        <div class="plan plan--popular">
+          <div class="card card--principal">
+            <!-- HEADER CARD -->
+            <header class="card__header">
+              <h3 class="plan__nume">Intrare</h3>
+              <span class="plan__pret">12&#8364;</span>
+              <span class="plan__facturare-ciclu">/luna</span>
+              <span class="badge badge--principal badge--mic">10% REDUS</span>
+              <span class="plan__descriere">Pornire ușoară pe cloud</span>
+            </header>
+
+            <!-- BODY CARD -->
+            <div class="card__body">
+              <!-- LISTA 'BIFATA' (TICK) -->
+              <ul class="list list--tick">
+                <li class="list__item">Website Final</li>
+                <li class="list__item">Lățime de Bandă Finală</li>
+                <li class="list__item">Depozitare SSD 100 GB</li>
+                <li class="list__item">RAM 3 GB</li>
+              </ul>
+
+              <!-- BUTON -->
+              <button class="btn ntn--outline btn-block">Cumpara Acum</button>
+            </div>
+          </div>
+        </div>
+        <!--____________________________________________-->
+
+        <!--__________PLAN ABONARE 3____________________-->
+        <div class="plan">
+          <div class="card card--secundar">
+            <!-- HEADER CARD -->
+            <header class="card__header">
+              <h3 class="plan__nume">Intrare</h3>
+              <span class="plan__pret">12&#8364;</span>
+              <span class="plan__facturare-ciclu">/luna</span>
+              <span class="badge badge--secundar badge--mic">10% REDUS</span>
+              <span class="plan__descriere">Pornire ușoară pe cloud</span>
+            </header>
+
+            <!-- BODY CARD -->
+            <div class="card__body">
+              <!-- LISTA 'BIFATA' (TICK) -->
+              <ul class="list list--tick">
+                <li class="list__item">Website Final</li>
+                <li class="list__item">Lățime de Bandă Finală</li>
+                <li class="list__item">Depozitare SSD 100 GB</li>
+                <li class="list__item">RAM 3 GB</li>
+              </ul>
+
+              <!-- BUTON -->
+              <button class="btn ntn--outline btn-block">Cumpara Acum</button>
+            </div>
+          </div>
+        </div>
+        <!--____________________________________________-->
+      </div>
+    </section>
+    <!-- ----------------------------------------------------------- -->
+
+    <!-- (CP 5) SEC. 'CARACTERISTICI'  -->
+    <section data-aos="fade-up" class="bloc container">
+      <header class="bloc__header">
+        <h2>Găzduirea pe Cloud pentru Mentinerea Cresterii</h2>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed,
+          officia?
+        </p>
+      </header>
+
+      <!-- ARTICOL 1 -->
+      <article class="grid grid--2-cols caracteristica">
+        <div data-aos="fade-right" class="caracteristica__continut">
+          <!-- INTRODUCEM ICON IN CONTAINER (PT. CREARE CERC) -->
+          <span class="icon-container">
+            <!-- ICON 'SVG' -->
+            <svg class="icon icon--principal">
+              <!-- INCARCAM DIN FISI
+              ERUL 'SPRITE.SVC'-- ID-UL '#EASY'  -->
+              <use xlink:href="images/sprite.svg#easy"></use>
+            </svg>
+          </span>
+
+          <h3 class="caracteristica__titlu">Super Usor de Utilizat</h3>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam
+            animi dolorem quasi veritatis exercitationem veniam sit error quos
+            numquam mollitia?
+          </p>
+
+          <a href="#" class="link-sageata">Află Mai Multe</a>
+        </div>
+
+        <!-- PICTURE -->
+        <picture data-aos="zoom-in-left">
+          <!-- WEBP -->
+          <source
+            type="image/webp"
+            srcset="images/easy.webp 1x, images/easy@2x.webp 2x"
+          />
+
+          <!-- JPG -->
+          <source
+            type="image/jpg"
+            srcset="images/easy.jpg 1x, images/easy@2x.jpg 2x"
+          />
+          <img
+            class="caracteristica__imagine"
+            src="images/easy@2x.jpg"
+            alt=""
+          />
+        </picture>
+      </article>
+
+      <!-- ARTICOL 2 -->
+      <article class="grid grid--2-cols caracteristica">
+        <div data-aos="fade-left" class="caracteristica__continut">
+          <!-- INTRODUCEM ICON IN CONTAINER (PT. CREARE CERC) -->
+          <span class="icon-container">
+            <!-- ICON 'SVG' -->
+            <svg class="icon icon--principal">
+              <!-- INCARCAM DIN FISI
+              ERUL 'SPRITE.SVC'-- ID-UL '#FAST'  -->
+              <use xlink:href="images/sprite.svg#fast"></use>
+            </svg>
+          </span>
+
+          <h3 class="caracteristica__titlu">
+            Pur și Simplu Website-uri Rapide
+          </h3>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam
+            animi dolorem quasi veritatis exercitationem veniam sit error quos
+            numquam mollitia?
+          </p>
+
+          <a href="#" class="link-sageata">Află Mai Multe</a>
+        </div>
+
+        <!-- PICTURE -->
+        <picture data-aos="zoom-in-right">
+          <!-- WEBP -->
+          <source
+            type="image/webp"
+            srcset="images/fast.webp 1x, images/fast@2x.webp 2x"
+          />
+
+          <!-- JPG -->
+          <source
+            type="image/jpg"
+            srcset="images/fast.jpg 1x, images/fast@2x.jpg 2x"
+          />
+          <img
+            class="caracteristica__imagine"
+            src="images/fast@2x.jpg"
+            alt=""
+          />
+        </picture>
+      </article>
+    </section>
+    <!-- ----------------------------------------------------------- -->
+
+    <!-- (CP 6) SEC. 'VITRINA' ('SHOPCASE')  -->
+    <section class="bloc bloc--negru bloc--inclinat-dreapta bloc-vitrina">
+      <header class="bloc__header">
+        <h2>Panou de Control Ușor de Utilizat</h2>
+      </header>
+
+      <div class="container grid grid--2-cols">
+        <!-- PICTURE -->
+        <picture data-aos="fade-right" class="bloc-vitrina__image">
+          <!-- WEBP -->
+          <source
+            type="image/webp"
+            srcset="images/ipad.webp 1x, images/ipad@2x.webp 2x"
+          />
+
+          <!-- JPG -->
+          <source
+            type="image/png"
+            srcset="images/ipad.pmg 1x, images/ipad@2x.png 2x"
+          />
+
+          <img src="images/ipad.png" alt="" />
+        </picture>
+
+        <!-- LISTA -->
+        <ul data-aos="fade-up" class="list">
+          <!-- ELEM. 1 -->
+          <li>
+            <!-- COMP. "MEDIA" -->
+            <div class="media">
+              <div class="media__image">
+                <!-- ICON 'SVG' -->
+                <svg class="icon icon--principal">
+                  <!-- INCARCAM DIN FISIERUL 'SPRITE.SVC'-- ID-UL '#SNAP'  -->
+                  <use xlink:href="images/sprite.svg#snap"></use>
+                </svg>
+              </div>
+
+              <div class="media__body">
+                <h3 class="media__titlu">
+                  Start Ușor & Actualizări Gestionate
+                </h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Dignissimos velit assumenda tempore fugit quibusdam amet non.
+                  Incidunt assumenda sed nihil!
+                </p>
+              </div>
+            </div>
+          </li>
+
+          <!-- ELEM. 2 - "GROWTH" -->
+          <li>
+            <!-- COMP. "MEDIA" -->
+            <div class="media">
+              <div class="media__image">
+                <!-- ICON 'SVG' -->
+                <svg class="icon icon--principal">
+                  <!-- INCARCAM DIN FISIERUL 'SPRITE.SVC'-- ID-UL '#GROWTH'  -->
+                  <use xlink:href="images/sprite.svg#growth"></use>
+                </svg>
+              </div>
+
+              <div class="media__body">
+                <h3 class="media__titlu">Staging, GIT & WP-CLI</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Dignissimos velit assumenda tempore fugit quibusdam amet non.
+                  Incidunt assumenda sed nihil!
+                </p>
+              </div>
+            </div>
+          </li>
+
+          <!-- ELEM. 3 -->
+          <li>
+            <!-- COMP. "MEDIA" -->
+            <div class="media">
+              <div class="media__image">
+                <!-- ICON 'SVG' -->
+                <svg class="icon icon--principal">
+                  <!-- INCARCAM DIN FISIERUL 'SPRITE.SVC'-- ID-UL '#WORDPRESS'  -->
+                  <use xlink:href="images/sprite.svg#wordpress"></use>
+                </svg>
+              </div>
+
+              <div class="media__body">
+                <h3 class="media__titlu">Dynamic Cathing & Mai Multe</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Dignissimos velit assumenda tempore fugit quibusdam amet non.
+                  Incidunt assumenda sed nihil!
+                </p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- ----------------------------------------------------------- -->
+
+    <!-- (CP 7) SEC. 'TESTIMONIALE'   -->
+    <section data-aos="zoom-in" class="bloc">
+      <!-- HEADER -->
+      <header class="bloc__header">
+        <h2>Ce Spun Clienții Noștri?</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, ex.
+        </p>
+      </header>
+
+      <!-- CONTAINER -->
+      <div class="container">
+        <!-- COMPPNENTA "TESTIMONIAL" -->
+        <!-- CARD -->
+        <div class="card testimonial">
+          <div class="grid grid--2-cols">
+            <div class="testimonial__image">
+              <img
+                src="images/testimonial.jpg"
+                alt="Un clint, zambitor, fericit."
+              />
+
+              <!-- INTRODUCEM ICON IN CONTAINER (PT. CREARE CERC) -->
+              <span class="icon-container icon-container--accent">
+                <!-- ICON 'SVG' -->
+                <svg class="icon icon--alb icon--mic">
+                  <!-- INCARCAM DIN FISIERUL 'SPRITE.SVC'-- ID-UL '#QUOTESSS'  -->
+                  <use xlink:href="images/sprite.svg#quotes"></use>
+                </svg>
+              </span>
+            </div>
+
+            <!-- BLOC  "CITAT" -->
+            <blockquote class="citat">
+              <p class="citat__text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Recusandae maiores cum cupiditate delectus vel ab dolorum esse.
+                Odio, suscipit. Laboriosam.
+              </p>
+
+              <footer>
+                <!-- MEDIA OBJECT -->
+                <div class="media">
+                  <div class="media__image">
+                    <!-- ICON 'SVG' -->
+                    <svg class="icon icon--principal linie__citat">
+                      <!-- INCARCAM DIN FISIERUL 'SPRITE.SVC'-- ID-UL '#LINE'  -->
+                      <use xlink:href="images/sprite.svg#line"></use>
+                    </svg>
+                  </div>
+
+                  <div class="media__body">
+                    <h3 class="media__titlu autor__citat">Marius Chivu</h3>
+                    <p class="citat__companie">Artificial Intelligence</p>
+                  </div>
+                </div>
+              </footer>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ----------------------------------------------------------- -->
+
+    <!-- (CP 8) SEC. CALLOUTS  MESSAGE BOX  (CASETE  DE  MESAJE DE  INSTINTARI) -->
+    <div class="container">
+      <div class="callout callout--principal">
+        <div class="grid grid--2-cols">
+          <div class="callout__continut">
+            <h2 class="callout__titlu">Sunteți Gata să Incepeți?</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Explicabo magnam totam rem, labore saepe quis nostrum dolor beatae
+              dolore aspernatur.
+            </p>
+          </div>
+
+          <!-- BUTON LINK -->
+          <a href="#" class="btn btn--secundar btn--intins">Incepe</a>
+        </div>
+      </div>
+    </div>
+    <!-- ----------------------------------------------------------- -->
+
+    <!-- (CP 9) SEC. 'FOOTER'   -->
     <footer class="bloc bloc--negru footer">
       <!-- CONTAINER  GRID -->
       <div class="container grid footer__sections">
@@ -124,5 +608,11 @@
 
     <!-- JAVASCRIPT FILE (IMPORT) -->
     <script src="js/main.js"></script>
+
+    <!-- AOS JS LIBRARY  (ANIMATE  ON  SCROLL) -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

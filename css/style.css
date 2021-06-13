@@ -614,7 +614,7 @@ a {
   outline: 0;
 
   /* DISTANTARE (PADDING) = PE "VERTICAL (SUS.- JOS)",  "ORIZONTAL (ST.- DR)" */
-  padding: 2rem 3rem;
+  padding: 2rem 4vw;
 
   text-align: center;
 
@@ -892,6 +892,8 @@ a {
   /* REDUCEM DISTANTA INTRE 'INPUT' & 'INPUT-GROUP' */
   /* VERTICAL (SUS & JOS) & ORIZONTAL (STANGA & DREAPTA) */
   padding: 1.5rem 2rem;
+
+  width: 0;
 }
 
  
@@ -2193,11 +2195,13 @@ nav.collapsible--deschis .nav__comutare {
 |     (PT. LISTE DE PRET PT. 'DOMENIU')
    =================================================== */
 .bloc-domenii__preturi {
+  color: var(--culoare-titluri);
+
   /* AFISARE "GRID" */
   display: grid;
 
   /* 3 COL (FR = FRACTIUNE) */
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
 
   /* 2RANDURI -- 6REM PT. INALTIMEA RANDURILOR */
   grid-template-rows: repeat(2, 6rem);
