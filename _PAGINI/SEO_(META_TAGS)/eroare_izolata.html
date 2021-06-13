@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PlayGround (Loc de Joaca)</title>
+
+    <!-- GOOGLE  FONTS (INTER - REGULAR, BOLD) -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- NORMALIZE CSS -->
+    <link rel="stylesheet" href="css/normalize.css" />
+
+    <!-- STYLE CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- IZOLAM "PROBLEMA"  -->
+    <!-- (CP 3) SEC. 'DOMENII'  -->
+    <sectio class="bloc container bloc-domenii">
+      <!-- HEADER SEC. -->
+      <header class="bloc__header">
+        <h2>Incepand de la 8 &euro;/luna</h2>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo, iste?
+        </p>
+      </header>
+
+      <!-- GRUPAREA CAMPURILOR INPUT   -->
+      <div class="input-group">
+        <!-- INPUTS (INTRATI) -->
+        <input
+          type="text"
+          class="input"
+          placeholder="Introduceti numele domeniului aici..."
+        />
+
+        <!-- BUTON -->
+        <button class="btn btn--accent">
+          <!-- ICON 'SVG' -->
+          <svg class="icon icon--alb">
+            <!-- INCARCAM DIN FISIERUL 'SPRITE.SVC'-- ID-UL '#SEARCH'  -->
+            <use xlink:href="images/sprite.svg#search"></use>
+          </svg>
+          Cauta
+        </button>
+      </div>
+
+      <!-- LISTA DE PRET -->
+      <ul class="list bloc-domenii__preturi">
+        <li><span class="badge badge--secundar">.com 9&euro;</span></li>
+        <li>.ro 12&euro;</li>
+        <li>.net 9&euro;</li>
+        <li>.eu 6&euro;</li>
+        <li>.info 13&euro;</li>
+        <li>.space 10&euro;</li>
+      </ul>
+    </sectio>
+    <!-- ----------------------------------------------------------- -->
+
+    <!-- JAVASCRIPT FILE (IMPORT) -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
