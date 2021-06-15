@@ -5,7 +5,7 @@
 :root {
   --culoare-principala: #2584ff;
   --culoare-secundara: #00d9ff;
-  --culoare-accent: #ff3400;
+  --culoare-accent: #fd0202;
   --culoare-titluri: #1b0760;
   --culoare-corp: #918ca4;
   --culoare-corp-intunecata: #5c5577;
@@ -765,7 +765,7 @@ a {
 |          (6.8.1) CLS. "BTN-OUTLINE" (CONTUT)
 |     ("BUTOANE" CU "LINIE DE  CONTUR" (FARA CULOARE) )
    =================================================== */
-.btn-outline {
+.btn--outline {
   background: #fff;
   color: var(--culoare-titluri);
   border: 2px solid var(--culoare-titluri);
@@ -780,7 +780,7 @@ a {
 |          (6.8.2H) CLS. "BTN-OUTLINE" (CONTUT)
 |     ("HOVER - BUTOANE" CU "LINIE DE  CONTUR" (FARA CULOARE) )
    =================================================== */
-.btn-outline:hover {
+.btn--outline:hover {
   background: var(--culoare-titluri);
   color: #fff;
 }
@@ -1534,7 +1534,7 @@ a {
    =================================================== */
 .callout {
   padding: 4rem;
-  border-radius: 4px;
+  border-radius: 5px;
 }
 
 /*
@@ -1594,6 +1594,19 @@ a {
    =================================================== */
 .callout__continut {
   text-align: center;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|          (14.6) CLS. "CALLOUT--SIGNUP"
+|     (PT. POZITIONAREA 'CALLOUT' PESTE 'FOOTER')
+   =================================================== */
+.callout-signup {
+  transform: translateY(5rem);
 }
 
 /*
@@ -2377,7 +2390,7 @@ nav.collapsible--deschis .nav__comutare {
    =================================================== */
 .footer__section {
   padding: 2rem;
-  border: 1px solid #393939;
+  border-bottom: 1px solid #393939;
 }
 
 /*
@@ -2405,6 +2418,8 @@ nav.collapsible--deschis .nav__comutare {
 .footer__titlu {
   text-transform: uppercase;
   font-weight: 600;
+  font-size: 2.5rem;
+  line-height: 1.5;
 }
 
 /*
@@ -2431,7 +2446,6 @@ nav.collapsible--deschis .nav__comutare {
 |     
    =================================================== */
 .footer__brand img {
-  width: 100%;
   max-width: 230px;
 }
 
@@ -2461,6 +2475,10 @@ nav.collapsible--deschis .nav__comutare {
 |       ( @MEDIA  QUERY (LATIME  MINIMA: 1024PX) )
 ********************************************************/
 @media screen and (min-width: 768px) {
+  .footer {
+    font-size: 1.5rem;
+  }
+
   .footer__sections {
     /* CREARE AUTOMATA - COLOANE GRID  */
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
