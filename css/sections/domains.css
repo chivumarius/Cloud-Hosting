@@ -1,0 +1,64 @@
+/*  
+********************************************************
+
+           (SEC. 2) SEC. 'DOMENII WEB' [MOBILE]
+
+********************************************************
+*/ /* == ============================================== 
+|       (SEC. 2) [1] CLS. "INPUT-GROUP" DIN
+|               CLS. "BLOC-DOMENII"
+|          (PT. SECTIUNEA 'DOMENIU')
+   =================================================== */
+.bloc-domenii .input-group {
+  /* VALORI = OFFSET (X Y), BLUR, RADIUS, COLOR  */
+  box-shadow: 0 0 30px 20px #e6ebee;
+
+  border: 0;
+  margin: 4rem auto;
+  max-width: 670px;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|    (SEC. 2) [2] CLS. "BLOC-DOMENII__PRETURI"
+|     (PT. LISTE DE PRET PT. 'DOMENIU')
+   =================================================== */
+.bloc-domenii__preturi {
+  color: var(--culoare-titluri);
+
+  /* AFISARE "GRID" */
+  display: grid;
+
+  /* 3 COL (FR = FRACTIUNE) */
+  grid-template-columns: repeat(2, 1fr);
+
+  /* 2RANDURI -- 6REM PT. INALTIMEA RANDURILOR */
+  grid-template-rows: repeat(2, 6rem);
+
+  font-size: 2rem;
+  font-weight: 600;
+  justify-items: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/*
+
+
+
+ 
+*/ /* 
+********************************************************
+|    (SEC. 2) SEC. 'DOMENII WEB' [TABLETA & DESKTOP]   
+|       ( @MEDIA  QUERY (LATIME  MINIMA: 1024PX) )
+********************************************************/
+@media screen and (min-width: 768px) {
+  .bloc-domenii__preturi {
+    /* NR COL. 'AUTO-FIT', CU DIM. MIN('10REM') & MAX ('1FR')  */
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  }
+}

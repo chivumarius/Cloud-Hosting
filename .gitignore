@@ -1,0 +1,4 @@
+# INSERAM 'FOLDERELE' SAU 'FISIERELE' -- PE CARE 'GIT' SA LE 'IGNORE'
+node_modules/
+dist/
+.cache/

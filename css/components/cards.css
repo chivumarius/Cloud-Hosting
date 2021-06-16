@@ -1,0 +1,89 @@
+/*  
+////////////////////////////////////////////////////////
+
+           (VIII) CARDURI   [MOBILE]
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+*/ /* == ============================================== 
+|          (8.1) CLS. "CARD"
+|     
+   =================================================== */
+.card {
+  border-radius: 7px;
+
+  /* SHADOW = "OFFSET: X, Y", "BLUR", 
+  box-shadow: 0 0 20px 10px #f3f3f3;  
+
+  /* ASCUNDEM  'SUPRAPUNEREA' 
+     (PT. ROTUNJIREA COLTURILOR HEADER__CARD) */
+  overflow: hidden;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|      (8.2) CLS. "CARD__HEADER" & "CARD__BODY"
+|             (DEF. PADDING-UL)
+   =================================================== */
+.card__header,
+.card__body {
+  padding: 2rem 3rem;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|  (8.3.1) CLS. "CARD__PRINCIPAL" CU SETARE "CARD__HEADER"
+|       (PT. DEF. CULORII PRINCIPALEL)
+   =================================================== */
+.card--principal .card__header {
+  background-color: var(--culoare-principala);
+  color: #fff;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|  (8.3.2) CLS. "BADGE--PRINCIPAL" DIN
+|          CLS. "CARD--PRINCIPAL"
+   =================================================== */
+.card--principal .badge--principal {
+  background-color: #126de4;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|  (8.4.2.1) CLS. "CARD__SECUNDAR" CU SETARE "CARD__HEADER"
+|       (PT. DEF. CULORII SECUNDARE)
+   =================================================== */
+.card--secundar .card__header {
+  background-color: var(--culoare-secundara);
+  color: #fff;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|  (8.4.2.2) CLS. "CARD__SECUNDAR" 
+|            CU SETARE "BADGE---SECUNDAR"
+|  (PT. DEF. "CULORII BACKGROUND" PT "BADGE SECUNDAR")
+   =================================================== */
+.card--secundar .badge--secundar {
+  background-color: #02cdf1;
+}

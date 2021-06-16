@@ -1,0 +1,72 @@
+/*  
+********************************************************
+
+     (SEC. 4) SEC. 'CARACTERISTICI' [MOBILE]
+
+********************************************************
+*/ /* == ============================================== 
+|      (SEC. 4) [1] CLS. "CARACTERISTICA" 
+|                   
+   =================================================== */
+.caracteristica {
+  /* GAP: RAND & COLOANE */
+  gap: 4rem 2rem;
+  margin: 12rem 0;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|  (SEC. 4) [2] PSEUDO-SELECTORUL ":FIRST-OF-TYPE" DIN  
+|               CLS. "CARACTERISTICA"
+|            (PT. SELECTAREA PRIMULUI ELEMENT)               
+   =================================================== */
+.caracteristica:first-of-type {
+  margin-top: 6rem;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|      (SEC. 4) [3] CLS. "CARACTERISTICA__TITLU" 
+|                   
+   =================================================== */
+.caracteristica__titlu {
+  margin: 1rem 0;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|      (SEC. 4) [4] CLS. "CARACTERISTICA__imagine" 
+|                   
+   =================================================== */
+.caracteristica__imagine {
+  width: 100%;
+}
+
+/*
+
+
+
+ 
+*/ /* 
+********************************************************
+|    (SEC. 4) SEC. 'CARACTERISTICI  WEB' [TABLETA & DESKTOP]   
+|       ( @MEDIA  QUERY (LATIME  MINIMA: 1024PX) )
+********************************************************/
+@media screen and (min-width: 768px) {
+  /* PSEUDO-SELECTORUL - PT. SELECTAREA ELEM. PARE */
+  .caracteristica:nth-of-type(even) .caracteristica__continut {
+    order: 2;
+  }
+}

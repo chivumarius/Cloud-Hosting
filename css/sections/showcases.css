@@ -1,0 +1,41 @@
+/*  
+*********************************************************
+
+           (SEC. 5) VITRINA / SHOWCASE  [MOBILE]
+
+*********************************************************
+*/ /* == ============================================== 
+|     (SEC. 5) [1] SEL "> IMG" DIN CLS. "BLOC-VITRINA__IMAGE"
+|     (PT. "IMAGINE  RESPONSIVE" )  
+   =================================================== */
+.bloc-vitrina__image > img {
+  width: 100%;
+}
+
+/*
+
+
+
+ 
+*/ /* 
+********************************************************
+|    (SEC. 5) SEC. 'VITRINA'/'SHOWCASE' [TABLETA & DESKTOP]   
+|       ( @MEDIA  QUERY (LATIME  MINIMA: 1024PX) )
+********************************************************/
+@media screen and (min-width: 768px) {
+  .bloc-vitrina .grid {
+    grid-template-columns: 50% 50%;
+  }
+
+  .bloc-vitrina__image {
+    /* ALINIERE IMG - LA DREAPTA COLOANEI */
+    justify-self: end;
+  }
+
+  .bloc-vitrina__image > img {
+    width: auto;
+
+    /* LIMITAM DIMENSIUNEA IMG */
+    max-width: 700px;
+  }
+}

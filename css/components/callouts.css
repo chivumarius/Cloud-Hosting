@@ -1,0 +1,114 @@
+/*  
+////////////////////////////////////////////////////////
+
+    (XIV) CALLOUTS (MES INSTINTARE)    [MOBILE]
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+*/ /* == ============================================== 
+|          (14.1) CLS. "CALLOUT"
+|     
+   =================================================== */
+.callout {
+  padding: 4rem;
+  border-radius: 5px;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|          (14.2) CLS. "CALLOUT--PRINCIPAL"
+|     
+   =================================================== */
+.callout--principal {
+  background-color: var(--culoare-principala);
+  color: #fff;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|          (14.3) CLS. "CALLOUT__TITLU"
+|     
+   =================================================== */
+.callout__titlu {
+  color: #fff;
+  margin-top: 0;
+  font-size: 3rem;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|          (14.4) CLS. "BTN" DIN CLS. "CALLOUT"
+|     
+   =================================================== */
+.callout .btn {
+  /* ALINIERE "ORIZONTALA" */
+  justify-self: center;
+
+  /* ALINIERE "VERTICALA" */
+  align-self: center;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|          (14.5) CLS. "CALLOUT__CONTINUT"
+|     
+   =================================================== */
+.callout__continut {
+  text-align: center;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|          (14.6) CLS. "CALLOUT--SIGNUP"
+|     (PT. POZITIONAREA 'CALLOUT' PESTE 'FOOTER')
+   =================================================== */
+.callout-signup {
+  transform: translateY(5rem);
+}
+
+/*
+
+
+
+
+*/ /* 
+   ////////////////////////////////////////////////////
+|                (XIV) CALLOUT (MES. INSTINTARE) [TABLETA]   
+|         ( @MEDIA  QUERY (LATIME  MINIMA: 1024PX) )
+   \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+@media screen and (min-width: 768px) {
+  .callout .grid--2-cols {
+    /* SPATUL LIBER DIN COL 2  ESTE ALOCAT COL. 1 */
+    grid-template-columns: 1fr auto;
+  }
+
+  .callout__continut {
+    text-align: left;
+  }
+
+  .callout .btn {
+    justify-self: start;
+
+    /* MARGINI "VERTICAL", "ORIZONTAL" */
+    margin: 0 2rem;
+  }
+}

@@ -1,0 +1,150 @@
+/*  
+////////////////////////////////////////////////////////
+
+    (SEC. 0) BARA DE NAVIGATIE    [MOBILE]
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+*/ /* == ============================================== 
+|          (SEC. 0 - 1) CLS. "NAV"
+|     
+   =================================================== */
+.nav {
+  background-color: #000;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 1rem;
+  align-items: center;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|        (SEC. 0 - 2) CLS. "NAV__LIST"
+|     
+   =================================================== */
+.nav__list {
+  width: 100%;
+  margin: 0;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|        (SEC. 0 - 3) CLS. "NAV__ITEM"
+|     
+   =================================================== */
+.nav__item {
+  /* SPATIERE "VERTICAL" & "ORIZONTAL" */
+  padding: 0.5rem 2rem;
+  border-bottom: 1px solid #222;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|     (SEC. 0 - 4.1) SELECTARE "A"  DIN  CLS. "NAV__ITEM"
+|     
+   =================================================== */
+.nav__item > a {
+  color: #d2d0db;
+  transition: color 0.3s;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|     (SEC. 0 - 4.2) SELECTARE "A:HOVER"  DIN  CLS. "NAV__ITEM"
+|     
+   =================================================== */
+.nav__item > a:hover {
+  color: #fff;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|        (SEC. 0 - 5) CLS. "NAV__COMUTARE"
+|     
+   =================================================== */
+.nav__comutare {
+  opacity: 0.5;
+  transition: box-shadow 0.15s;
+  cursor: pointer;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|        (SEC. 0 - 6) CLS. "NAV__COMUTARE" DUN 
+|               CLS. "NAV.COLLAPSIBLE--DESCHIS"
+   =================================================== */
+nav.collapsible--deschis .nav__comutare {
+  opacity: 1;
+
+  /* VALORI: OFFSET (VERTIC, ORIZ), BLUR,LATIMEA, CULOAREA  */
+  box-shadow: 0 0 0 3px #666;
+  border-radius: 5px;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|        (SEC. 0 - 7) CLS. "NAV__BRAND" 
+|               
+   =================================================== */
+.nav__brand {
+  /* MUTAM  LOGO = CU '5PX' MAI JOS */
+  transform: translateY(5px);
+}
+
+/*
+
+
+
+
+*/ /* 
+   ////////////////////////////////////////////////////
+|                (SEC. 0) NAVIGATION  BAR  [TABLETA & DESKTOP]   
+|         ( @MEDIA  QUERY (LATIME  MINIMA: 1024PX) )
+   \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+@media screen and (min-width: 768px) {
+  .nav__comutare {
+    display: none;
+  }
+
+  .nav__list {
+    width: auto;
+    display: flex;
+    font-size: 1.6rem;
+
+    /* FACEM ICONUL VIZIBIL */
+    max-height: 100%;
+    opacity: 1;
+  }
+
+  .nav__item {
+    border: 0;
+  }
+}

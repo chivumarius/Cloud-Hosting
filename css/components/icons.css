@@ -1,0 +1,98 @@
+/*  
+////////////////////////////////////////////////////////
+
+           (V) ICONS (PICTOGRAME)  [MOBILE]
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+*/ /* == ============================================== 
+|          (5.1) CLS. "ICON"
+|     (PT. DIMENSIONAREA ICON-URILOR)
+   =================================================== */
+.icon {
+  width: 40px;
+  height: 40px;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|          (5.2) CLS. "ICON--MIC"
+|     (PT. MICSORAREA DIMENSIUNII ICON-URILOR)
+   =================================================== */
+.icon--mic {
+  width: 30px;
+  height: 30px;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|          (5.3) CLS. "ICON"
+|     (PT. CULOAREA FRONT A ICON-URILOR)
+   =================================================== */
+.icon--principal {
+  /* PROP. SVG "FILL" (IN LOC DE "COLOR")   */
+  fill: var(--culoare-principala);
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|          (5.4) CLS. "ICON--ALB"
+|     (PT. CULOAREA FRONT a ICON-URILOR)
+   =================================================== */
+.icon--alb {
+  /* PROP. SVG "FILL" (IN LOC DE "COLOR")   */
+  fill: #fff;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|          (5.5) CLS. "ICON-CONTAINER"
+|         (PT. CREARE CERC IN JURUL ICON-ULUI)
+   =================================================== */
+.icon-container {
+  /* background-color: gold; */
+  background-color: #f3f9fa;
+
+  width: 64px;
+  height: 64px;
+
+  /* IL ROTUNJIM */
+  border-radius: 100%;
+
+  /* AFISAREA CENTRATA = "FLEX IN LINIE" */
+  display: inline-flex;
+
+  /* ALINIEREA FATA DE "AXA ORIZONTALA" */
+  justify-content: center;
+
+  /* ALINIEREA FATA DE "AXA VERTICALA" */
+  align-items: center;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|       (5.6) CLS. "ICON-CONTAINER--ACCENT"
+|       (PT. BACKGROUND ICON - TESTIMONIAL)
+   =================================================== */
+.icon-container--accent {
+  background-color: var(--culoare-accent);
+}

@@ -1,0 +1,76 @@
+/*  
+////////////////////////////////////////////////////////
+
+           (XIII) TESTIMONIALS    [MOBILE]
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+*/ /* == ============================================== 
+|          (13.1) CLS. "TESTIMONIAL"
+|     
+   =================================================== */
+.testimonial {
+  padding: 3rem;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|          (13.2) CLS. "TESTIMONIAL__IMAGE"
+|     
+   =================================================== */
+.testimonial__image {
+  position: relative;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|          (13.3) TRANS-SELECTORUL " > IMG" DIN CLS. "TESTIMONIAL__IMAGE"
+|                  (PT. SELECTAREA IMAGINI)
+   =================================================== */
+.testimonial__image > img {
+  width: 100%;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|          (13.4) TRANS-SELECTORUL CLS. " > .ICON-CONTAINER" 
+|                      DIN CLS. "TESTIMONIAL__IMAGE"     
+|             ( PT. POZITIONAREA ABSOLUTA A ICON-ULUI)          
+   =================================================== */
+.testimonial__image > .icon-container {
+  position: absolute;
+  top: 3rem;
+  right: -32px;
+}
+
+/*
+
+
+
+
+*/ /* 
+   ////////////////////////////////////////////////////
+|                (XIII) GRIDS [TABLET]   
+|         ( @MEDIA  QUERY (LATIME  MINIMA: 1024PX) )
+   \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+@media screen and (min-width: 768px) {
+  .testimonial .quote,
+  .testimonial .autor__citat {
+    font-size: 2.4rem;
+  }
+
+  .testimonial .quote {
+    margin-left: 6rem;
+  }
+}

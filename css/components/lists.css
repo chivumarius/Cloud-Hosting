@@ -1,0 +1,80 @@
+/*  
+////////////////////////////////////////////////////////
+
+           (IV) LISTE  [MOBILE]
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+*/ /* == ============================================== 
+|        (4.1) CLS. "LIST"
+|     
+   =================================================== */
+.list {
+  /* DEZACTIVAM BULLETS POINTS */
+  list-style: none;
+
+  /* ELIMINAREA PADDING-ULUI ADAUGAT DE BROUSER */
+  padding-left: 0;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|        (4.2) CLS. ".LIST--INLINE .LIST__ITEM"
+|        
+   =================================================== */
+.list--inline .list__item {
+  /*  AFISARE 'BLOC IN LINIE'  */
+  display: inline-block;
+
+  margin-right: 2rem;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|        (4.3) CLS. ".LIST--TICK" (LISTA BIFATA)
+|        
+   =================================================== */
+.list--tick {
+  /* INCARCARE "IMG  DE  STILIZARE A LISTEI" */
+  list-style-image: url(../images/tick.svg);
+
+  padding-left: 3rem;
+  color: var(--culoare-titluri);
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|        (4.4) CLS. ".LIST--TICK .LIST__ITEM" (LISTA BIFATA)
+|        
+   =================================================== */
+.list--tick .list__item {
+  padding-left: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/*  
+
+
+
+
+*/ /* 
+   ////////////////////////////////////////////////////
+|                (IV) LISTE  [DESKTOP]   
+|         ( @MEDIA  QUERY (LATIME  MINIMA: 1024PX) )
+   \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+@media screen and (min-width: 1024px) {
+  .list--tick .list__item {
+    padding-left: 0;
+  }
+}

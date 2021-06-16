@@ -1,0 +1,131 @@
+/*  
+////////////////////////////////////////////////////////
+
+    (XVI) SECTIUNI  (BLOCKS / BLOCURI)    [MOBILE]
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+*/ /* == ============================================== 
+|          (16.1) CLS. "BLOC"
+|     
+   =================================================== */
+.bloc {
+  /* VARIABILA GLOBALA PERSONALIZATA (PT. SECTIUNI) */
+  --padding-vertical: 6rem;
+
+  /* DIST. "VERTICALA" & "ORIZONTALA" */
+  padding: var(--padding-vertical) 2rem;
+
+  /* PT TESTARE */
+  /* border: 2px solid red; */
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|          (16.2) CLS. "BLOC__HEADER"
+|     
+   =================================================== */
+.bloc__header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|          (16.3) CLS. "BLOC__TITLU"
+|     (PT. ECHILIBRAREA SPATIILE SECTIUNII)
+   =================================================== */
+.bloc__titlu {
+  margin-top: 0;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|      (16.4.1) CLS. "BLOC--NEGRU"
+|     (PT. "SEC." PE FUNDAL "NEGRU")
+   =================================================== */
+.bloc--negru {
+  background: #000;
+  color: #7b858b;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|  (16.4.2) SEL. "H1, H2, H3" DIN CLS. "BLOC--NEGRU"
+| (PT. "TEXTUL" DE PE BG. "NEGRU" SA AIBA CULOARE "ALBA")
+   =================================================== */
+.bloc--negru h1,
+.bloc--negru h2,
+.bloc--negru h3 {
+  color: #fff;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|   (16.5) CLS. "BLOC__TITLU" DIN CLS. "BLOC--NEGRU"
+|     (PT. CULOAREA TITLULUI PE BG. NEGRU)
+   =================================================== */
+.bloc--negru .bloc__titlu {
+  color: #fff;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|          (16.6.1) CLS. "BLOC--INCLIBAT-DREAPTA"
+|     (PT. "SEC." INCLINATA LA DREAPTA)
+   =================================================== */
+.bloc--inclinat-dreapta {
+  /* FUNC. "CALC()" -- PT. ADG. VALORI SUPLIMENTARE */
+  padding-bottom: calc(var(--padding-vertical) + 4rem);
+
+  /* PROP. "CLIP-PATH" */
+  /* PERECHILE REPREZ. UN PUNCT "X Y" */
+
+  /* PCT. 1 ("ST. SUS"),  PCT. 2 ("DR. SUS")" */
+  /* PCT. 3 ("ST. JOS"),  PCT. 4 ("DR. JOS")" */
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 90%);
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|          (16.6.2) CLS. "BLOC--INCLIBAT-STANGA"
+|     (PT. "SEC." INCLINATA LA STANGA)
+   =================================================== */
+.bloc--inclinat-stanga {
+  /* FUNC. "CALC()" -- PT. ADG. VALORI SUPLIMENTARE */
+  padding-bottom: calc(var(--padding-vertical) + 4rem);
+
+  /* PROP. "CLIP-PATH" */
+  /* PERECHILE REPREZ. UN PUNCT "X Y" */
+
+  /* PCT. 1 ("ST. SUS"),  PCT. 2 ("DR. SUS")" */
+  /* PCT. 3 ("ST. JOS"),  PCT. 4 ("DR. JOS")" */
+  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
+}

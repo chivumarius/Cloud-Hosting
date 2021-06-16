@@ -1,0 +1,51 @@
+/*  
+*********************************************************
+
+           (SEC. 1) BANNER / HERO  [MOBILE]
+
+*********************************************************
+*/ /* == ============================================== 
+|         (SEC. 1) [1] CLS. "HERO__SLOGAN"
+|     
+   =================================================== */
+.hero__slogan {
+  font-size: 2rem;
+  color: #b9c3cf;
+  letter-spacing: 1px;
+  margin: 2rem 0 5rem;
+}
+
+/* 
+
+
+
+
+*/ /* == ============================================== 
+|        (SEC. 1) [2] CLS. "HERO__IMAGE"
+|     
+   =================================================== */
+.hero__image {
+  width: 100%;
+}
+
+/*
+
+
+
+
+*/ /* 
+********************************************************
+|      (SEC. 1) BANNER / HERO  [TABLETA & DESKTOP]   
+|       ( @MEDIA  QUERY (LATIME  MINIMA: 1024PX) )
+********************************************************/
+@media screen and (min-width: 768px) {
+  .hero {
+    padding-top: 0;
+  }
+
+  .hero__continut {
+    text-align: left;
+    /* POZITIONAREA "CENTRALA" A CONTINUTULUI */
+    align-self: center;
+  }
+}

@@ -1,0 +1,81 @@
+/*  
+////////////////////////////////////////////////////////
+
+           (III) BADGES (INSIGNE))  [MOBILE]
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+*/ /* == ============================================== 
+|        (3.1) CLS. "BADGE"
+|     (DEF. STRUCTURA INSIGNEI)    
+   =================================================== */
+.badge {
+  border-radius: 20px;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 0.5rem 2rem;
+
+  /* DEZACTIVAREA IMPACHETARII (WRAPPING) - PT. A EVITA MUTAREA PE ALTA RAND*/
+  white-space: nowrap;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|        (3.2) CLS. "BADGE--PRINCIPAL"
+|     (DEF. SCHEMEI INSIGNEI)    
+   =================================================== */
+.badge--principal {
+  background: var(--culoare-principala);
+  color: #fff;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|        (3.2) CLS. "BADGE--SECUNDAR"
+|     (DEF. SCHEMEI INSIGNEI)    
+   =================================================== */
+.badge--secundar {
+  background: var(--culoare-secundara);
+  color: #fff;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|        (3.3) CLS. "BADGE--MIC"
+|     (DEF. DIM. INSIGNEI MICI)    
+   =================================================== */
+.badge--mic {
+  font-size: 1.6rem;
+  padding: 0.5rem 1.5rem;
+}
+
+/*  
+
+
+
+
+*/ /* 
+   ////////////////////////////////////////////////////
+|                (III) BADGES (INSIGNE)  [DESKTOP]   
+|         ( @MEDIA  QUERY (LATIME  MINIMA: 1024PX) )
+   \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+@media screen and (min-width: 1024px) {
+  .badge {
+    font-size: 1.5rem;
+  }
+
+  .badge--mic {
+    font-size: 1.2rem;
+  }
+}

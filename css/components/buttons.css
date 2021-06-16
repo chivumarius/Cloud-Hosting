@@ -1,0 +1,215 @@
+/*  
+////////////////////////////////////////////////////////
+
+           (VI) BUTOANE   [MOBILE]
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+*/ /* == ============================================== 
+|          (6.1) CLS. "BTN"
+|     (PT. FONT, DISTANTARE SI BORDER)
+   =================================================== */
+.btn {
+  /* DEZACTIVARE BORDER (LINIE DE CONTUR)) */
+  border: 0;
+
+  /* ROTUNJIRE COLTURI BORDER */
+  border-radius: 40px;
+
+  /* SETARE  CURSOR (LA HOVER PESTE BUTON) = 'POINTER' (MANA) */
+  cursor: pointer;
+  font-size: 1.8rem;
+  font-weight: 600;
+
+  /* MARGINI = PE "VERTICAL (SUS.- JOS)",  "ORIZONTAL (ST.- DR)" */
+  margin: 1rem 0;
+
+  /* DEZACTIVARE 'CUTIA' CE APARE LA 'CLIC PE BUTON' */
+  outline: 0;
+
+  /* DISTANTARE (PADDING) = PE "VERTICAL (SUS.- JOS)",  "ORIZONTAL (ST.- DR)" */
+  padding: 2rem 4vw;
+
+  text-align: center;
+
+  /* TRANSFORMAREA "CARACTERELOR" -- IN "LITERE MARI" */
+  text-transform: uppercase;
+
+  /* SPATIEREA AUTOMATA = 'NOWRAP' (FARA IMPACHETARE) */
+  white-space: nowrap;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|        (6.2) CLS. "ICON" IN CLS. "BTB"
+|             (PT. ICON PE BUTON)
+   =================================================== */
+.btn .icon {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1rem;
+  vertical-align: middle;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|          (6.3.1) CLS. "BTN--PRINCIPAL"
+|     (PT. CULOARE - BUTON & TEXT)
+   =================================================== */
+.btn--principal {
+  background-color: var(--culoare-principala);
+  color: #fff;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|          (6.3.1.H) CLS. "BTN--PRINCIPAL:HOVER"
+|     (ADAUGAREA  EFECTULUI HOVER PE BUTON)
+   =================================================== */
+.btn--principal:hover {
+  /* FUNC. SASS 'LIGHTEN()' */
+  /* background-color: lighten(principal, 10%); */
+
+  background: #3a8ffd;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|          (6.4.1) CLS. "BTN--SECUNDAR"
+|     (PT. CULOARE - BUTON & TEXT)
+   =================================================== */
+.btn--secundar {
+  background-color: var(--culoare-secundara);
+  color: #fff;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|          (6.4.2.H) CLS. "BTN--SECUNDAR:HOVER"
+|     (ADAUGAREA  EFECTULUI HOVER PE BUTON)
+   =================================================== */
+.btn--secundar:hover {
+  background-color: #00c8eb;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|          (6.5.1) CLS. "BTN--ACCENT"
+|     (PT. CULOARE - BUTON & TEXT)
+   =================================================== */
+.btn--accent {
+  background-color: var(--culoare-accent);
+  color: #fff;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|          (6.5.2H) CLS. "BTN--ACCENT:HOVER"
+|     (ADAUGAREA  EFECTULUI HOVER PE BUTON)
+   =================================================== */
+.btn--accent:hover {
+  background-color: #ec3000;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|          (6.6) CLS. "BTN--INTINS" (STRETCHED)
+|     (PT. BTN LUNGI (PE MOBIL))
+   =================================================== */
+.btn--intins {
+  padding-left: 6rem;
+  padding-right: 6rem;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|          (6.7) CLS. "BTN-BLOCK"
+|     ("BUTOANE" PE "INTREAGA LATIME" A "COLOANEI")
+   =================================================== */
+.btn-block {
+  /* LATIME PE TOT RANDUL */
+  width: 100%;
+
+  /* AFISARE - "BLOC IN LINIE" */
+  display: inline-block;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|          (6.8.1) CLS. "BTN-OUTLINE" (CONTUT)
+|     ("BUTOANE" CU "LINIE DE  CONTUR" (FARA CULOARE) )
+   =================================================== */
+.btn--outline {
+  background: #fff;
+  color: var(--culoare-titluri);
+  border: 2px solid var(--culoare-titluri);
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|          (6.8.2H) CLS. "BTN-OUTLINE" (CONTUT)
+|     ("HOVER - BUTOANE" CU "LINIE DE  CONTUR" (FARA CULOARE) )
+   =================================================== */
+.btn--outline:hover {
+  background: var(--culoare-titluri);
+  color: #fff;
+}
+
+/*  
+
+
+
+
+*/ /* 
+   ////////////////////////////////////////////////////
+|                (VI) BUTOANE  [DESKTOP]   
+|         ( @MEDIA  QUERY (LATIME  MINIMA: 1024PX) )
+   \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+@media screen and (min-width: 1024px) {
+  .btn {
+    font-size: 1.5rem;
+  }
+}

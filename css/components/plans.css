@@ -1,0 +1,188 @@
+/*  
+////////////////////////////////////////////////////////
+
+           (IX) PLAN  ABONAMENT   [MOBILE]
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+*/ /* == ============================================== 
+|          (9.1) CLS. "PLAN"
+|     (PT. ANIMAREA - PROP. 'TRANSFORM', TIMP DE 02 SEC, EFECT 'EASY-OUT')
+   =================================================== */
+.plan {
+  transition: transform 0.2s ease-out;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|          (9.2) CLS. "PLAN__NUME"
+|     
+   =================================================== */
+.plan__nume {
+  color: #fff;
+  margin: 0;
+  font-weight: 500;
+  font-size: 2.4rem;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|          (9.3) CLS. "PLAN__PRET"
+|     
+   =================================================== */
+.plan__pret {
+  font-size: 6rem;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|          (9.4) CLS. "PLAN__FACTURARE-CICLU"
+|     
+   =================================================== */
+.plan__facturare-ciclu {
+  font-size: 2.4rem;
+  font-weight: 300;
+  opacity: 0.8;
+  margin: 1rem;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|          (9.5) CLS. "PLAN__FACTURARE-CICLU"
+|     
+   =================================================== */
+.plan__descriere {
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  display: block;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|          (9.6) CLS. "LIST__ITEM" DIN "PLAN"
+|     
+   =================================================== */
+.plan .list__item {
+  margin-bottom: 2rem;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|   (9.7) CLS. "PLAN--POPULAR"
+|   (PT. MARIREA CU 10% A PLANULUI POPULAR)
+   =================================================== */
+.plan--popular {
+  transform: scale(1.1);
+}
+
+/*
+
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|   (9.8) CLS. "CARD-HEADER" PT. "PLAN--POPULAR"
+|         (DE CARE SE LEAGA PSEUDOCLASA)
+   =================================================== */
+.plan--popular .card__header {
+  position: relative;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|   (9.9) PSEUDO-CLS. "CARD-HEADER::BEFORE" PT. "PLAN--POPULAR"
+|         (PT. INSERARE ICONULUI "POPULAR.SVG")
+   =================================================== */
+.plan--popular .card__header::before {
+  content: url(../images/popular.svg);
+  width: 40px;
+  display: inline-block;
+  position: absolute;
+  top: -6px;
+  right: 5%;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|   (9.10:H) CLS. "PLAN:HOVER" 
+|   (PT. EFECT DE MARIRE CU 5% A PLANURILOR)
+   =================================================== */
+.plan:hover {
+  transform: scale(1.05);
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|   (9.11:H) CLS. "PLAN--POPULAR:HOVER" 
+|   (PT. EFECT DE MARIRE CU 5% A PLANURILOR)
+   =================================================== */
+.plan--popular:hover {
+  transform: scale(1.15);
+}
+
+/*
+
+
+
+
+*/ /* 
+   ////////////////////////////////////////////////////
+|                (IX) PLAN - CARD  [DESKTOP]   
+|         ( @MEDIA  QUERY (LATIME  MINIMA: 1024PX) )
+   \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+@media screen and (min-width: 1024px) {
+  .plan__nume {
+    font-size: 1.4rem;
+  }
+
+  .plan__pret {
+    font-size: 5rem;
+  }
+
+  .plan__facturare-ciclu {
+    font-size: 1.5rem;
+  }
+
+  .plan__descriere {
+    font-size: 1.7rem;
+  }
+}

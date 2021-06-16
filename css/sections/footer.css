@@ -1,0 +1,176 @@
+/*  
+*********************************************************
+
+     (SEC. 6) FOOTER / SUBSOL  [MOBILE]
+
+*********************************************************
+*/ /* == ============================================== 
+|     (SEC. 6) [1] CLS. "FOOTER"
+|     
+   =================================================== */
+.footer {
+  background-color: #232323;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|     (SEC. 6) [2.1] SEL. "A" DIN CLS. "FOOTER"
+|     
+   =================================================== */
+.footer a {
+  color: #777;
+  transition: color 0.3s;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|    (SEC. 6) [2.2.H] SEL. "A:HOVER" DIN CLS. "FOOTER"
+|     
+   =================================================== */
+.footer a:hover {
+  color: #fff;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|     (SEC. 6) [3] CLS. "FOOTER__SECTION"
+|     
+   =================================================== */
+.footer__section {
+  padding: 2rem;
+  border-bottom: 1px solid #393939;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|     (SEC. 6) [4] CLS. "LIST" DIN CLS. "FOOTER__SECTION"
+|     
+   =================================================== */
+.footer__section .list {
+  margin: 0;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|     (SEC. 6) [5] CLS. "FOOTER__TITLU"
+|     
+   =================================================== */
+.footer__titlu {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 2.5rem;
+  line-height: 1.5;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|     (SEC. 6) [6] CLS. "FOOTER__BRANDU"
+|     
+   =================================================== */
+.footer__brand {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|     (SEC. 6) [7] SELEC. "IMG" DIN CLS. "FOOTER__BRANDU"
+|     
+   =================================================== */
+.footer__brand img {
+  max-width: 230px;
+}
+
+/*
+
+
+
+
+*/ /* == ============================================== 
+|     (SEC. 6) [8] CLS. "FOOTER__COPYRIGHT"
+|     
+   =================================================== */
+.footer__copyright {
+  font-size: 2.1rem;
+  color: #fff;
+  opacity: 0.3;
+}
+
+/*
+
+
+
+ 
+*/ /* 
+********************************************************
+|    (SEC. 6) SEC. 'FOOTER' [TABLETA & DESKTOP]   
+|       ( @MEDIA  QUERY (LATIME  MINIMA: 1024PX) )
+********************************************************/
+@media screen and (min-width: 768px) {
+  .footer {
+    font-size: 1.5rem;
+  }
+
+  .footer__sections {
+    /* CREARE AUTOMATA - COLOANE GRID  */
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  }
+
+  .footer .collapsible__icon-chevron {
+    /* VA FI ASCUNS */
+    display: none;
+  }
+
+  .footer .collapsible__continut {
+    opacity: 1;
+    max-height: 100%;
+  }
+
+  .footer__brand {
+    /* SCHIMBAM ORDINEA LOGO-ULUI */
+    order: -1;
+
+    margin-top: 1rem;
+  }
+
+  .footer__copyright {
+    font-size: 1.5rem;
+  }
+
+  .footer__section {
+    /* ASCUNDEM BORDER */
+    border: 0;
+  }
+
+  .footer__titlu {
+    font-size: 1.6rem;
+  }
+}
